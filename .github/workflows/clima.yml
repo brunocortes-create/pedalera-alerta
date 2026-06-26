@@ -38,7 +38,7 @@ jobs:
 
       - name: Coletar clima da Open-Meteo
 
-        run: python roteiros/buscar_clima.py
+        run: python buscar_clima.py
 
       - name: Salvar resultado no repositorio
 
