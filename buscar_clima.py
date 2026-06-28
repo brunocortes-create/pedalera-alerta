@@ -68,12 +68,12 @@ def resumir(data, alvo):
     elif umid_max is not None and umid_max >= 90 and vento_med is not None and vento_med < 10:
         risco_neblina = "medio"       # condicoes favoraveis, nao garantido
     return {
-        "temp_min_c": mn("temperature_2m", idx_janela),
-        "temp_max_janela_c": mx("temperature_2m", idx_janela),
-        "temp_med_c": med("temperature_2m", idx_janela),
-        "sensacao_min_c": mn("apparent_temperature", idx_janela),
-        "sensacao_largada_c": sens_largada,
-        "sensacao_final_c": sens_final,
+        "temp_min_c": round(mn("temperature_2m", idx_janela)) if mn("temperature_2m", idx_janela) is not None else None,
+        "temp_max_janela_c": round(mx("temperature_2m", idx_janela)) if mx("temperature_2m", idx_janela) is not None else None,
+        "temp_med_c": round(med("temperature_2m", idx_janela)) if med("temperature_2m", idx_janela) is not None else None,
+        "sensacao_min_c": round(mn("apparent_temperature", idx_janela)) if mn("apparent_temperature", idx_janela) is not None else None,
+        "sensacao_largada_c": round(sens_largada) if sens_largada is not None else None,
+        "sensacao_final_c": round(sens_final) if sens_final is not None else None,
         "umidade_max_pct": umid_max,
         "visibilidade_min_m": vis_min,
         "risco_neblina": risco_neblina,
