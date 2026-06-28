@@ -8,9 +8,9 @@ extrai janela 4h-8h de AMANHA + nascer do sol + sensação térmica
 import urllib.request, json, datetime, zoneinfo
 
 PONTOS = {
-    "barra_recreio": {"lat": -23.02, "lon": -43.44, "nome": "Barra/Recreio"},
-    "zona_sul": {"lat": -22,97, "lon": -43,19, "nome": "Zona Sul"},
-    "grumari": {"lat": -23,05, "lon": -43,52, "nome": "Grumari"},
+"barra_recreio": {"lat": -23.02, "lon": -43.44, "nome": "Barra/Recreio"},
+   "zona_sul":      {"lat": -22.97, "lon": -43.19, "nome": "Zona Sul"},
+   "grumari":       {"lat": -23.05, "lon": -43.52, "nome": "Grumari"},
 }
 
 TZ = zoneinfo.ZoneInfo("América/São_Paulo")
