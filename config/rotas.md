@@ -54,3 +54,29 @@ Valores aproximados, calibrados pela geografia da orla — ajustar conforme feed
 Zona Norte, Niterói/Região Oceânica e Baixada ficam fora da v1 do boletim.
 Niterói está fora do município (COR não cobre). Avaliar inclusão conforme
 o canal crescer e aparecerem pedidos.
+
+# ───────────────────────────────────────────────────────────
+# NOTAS DE MICROCLIMA (conhecimento local — vantagem do Pedal Rio)
+# ───────────────────────────────────────────────────────────
+
+# COMO FUNCIONA:
+# Trechos específicos que se comportam diferente da média da região.
+# Cada nota tem um STATUS:
+#   - ATIVA: confirmada por observação repetida. O boletim SEMPRE a inclui
+#     quando a CONDIÇÃO-GATILHO for verdadeira.
+#   - CANDIDATA: observada uma vez, ainda não confirmada. O boletim NÃO usa.
+#     Fica aqui aguardando o editor confirmar com mais observações.
+#
+# O editor (Bruno) promove CANDIDATA → ATIVA quando vir o padrão se repetir.
+
+## CANDIDATA — Estrada do Pontal: pé da Grota Funda até a rotatória da Prainha
+- Status: CANDIDATA (observado 1x em 27/06 — molhado com resto da região seco)
+- Hipótese: trecho sombreado, baixo, sem sol direto e muito úmido; retém umidade
+  e seca devagar. Pode estar molhado mesmo com a previsão geral seca.
+- Condição-gatilho (quando confirmar): se chuva_mm_madrugada_antes > 0 em grumari
+  OU choveu nas 24h anteriores → incluir aviso no bloco Grumari.
+- Texto do aviso (quando ATIVA): "⚠️ Pé da Grota até a rotatória da Prainha:
+  trecho sombreado e úmido, costuma amanhecer molhado mesmo com o resto seco —
+  atenção ao piso."
+- AÇÃO DO EDITOR: confirmar em 2-3 madrugadas se o padrão se repete. Se sim,
+  mudar Status para ATIVA.
