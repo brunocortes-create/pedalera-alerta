@@ -1,55 +1,36 @@
 name: Coletar Clima Pedal Rio
 
 on:
-
   schedule:
-
-    # GitHub Actions usa UTC. 19h BRT = 22h UTC. Roda 21:50 UTC para o
-
-    # arquivo estar pronto antes do boletim das 20h BRT.
-
-    - cron: '50 22 * * *'
-
-  workflow_dispatch:   # permite rodar manualmente pelo site do GitHub
+    # GitHub Actions uses UTC. Target: run by 18:00 BRT (21:00 UTC),
+    # giving ~2h buffer before the 20:00 BRT Routine reads the file.
+    # BRT = UTC - 3.
+    - cron: '0 21 * * *'
+  workflow_dispatch:   # allows manual run from the GitHub website
 
 permissions:
-
-  contents: write       # necessario para o workflow gravar o arquivo no repo
+  contents: write   # required for the workflow to commit the file to the repo
 
 jobs:
-
-  coletar:
-
+  buscar-clima:
     runs-on: ubuntu-latest
-
     steps:
 
-      - name: Baixar o repositorio
-
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Configurar Python
-
+      - name: Set up Python
         uses: actions/setup-python@v5
-
         with:
-
           python-version: '3.12'
 
-      - name: Coletar clima da Open-Meteo
-
+      - name: Fetch weather from Open-Meteo
         run: python buscar_clima.py
 
-      - name: Salvar resultado no repositorio
-
+      - name: Commit and push result
         run: |
-
           git config user.name "Pedal Rio Bot"
-
           git config user.email "bot@pedalrio.local"
-
           git add config/clima-amanha.json
-
-          git diff --staged --quiet || git commit -m "Clima atualizado [automatico]"
-
+          git diff --staged --quiet || git commit -m "Clima atualizado [automático]"
           git push
