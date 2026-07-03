@@ -1,70 +1,22 @@
 {
-  "gerado_em": "2026-07-03T19:54:36.604186-03:00",
+  "gerado_em": "2026-07-03T20:48:33.993792-03:00",
   "data_alvo": "2026-07-04",
   "fonte": "Open-Meteo",
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "temp_min_c": 20,
-      "temp_max_janela_c": 21,
-      "temp_med_c": 20,
-      "sensacao_min_c": 22,
-      "sensacao_largada_c": 22,
-      "sensacao_final_c": 23,
-      "umidade_max_pct": 96,
-      "visibilidade_min_m": 420.0,
-      "risco_neblina": "alto",
-      "chuva_prob_max_pct": 41,
-      "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 7.2,
-      "rajada_max_kmh": 16.2,
-      "vento_dir_graus": 309,
-      "vento_dir_cardeal": "NO",
-      "nascer_do_sol": "06:35",
-      "ok": true
+      "ok": false,
+      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "temp_min_c": 20,
-      "temp_max_janela_c": 21,
-      "temp_med_c": 20,
-      "sensacao_min_c": 22,
-      "sensacao_largada_c": 23,
-      "sensacao_final_c": 24,
-      "umidade_max_pct": 96,
-      "visibilidade_min_m": 560.0,
-      "risco_neblina": "alto",
-      "chuva_prob_max_pct": 0,
-      "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 4.3,
-      "rajada_max_kmh": 12.2,
-      "vento_dir_graus": 309,
-      "vento_dir_cardeal": "NO",
-      "nascer_do_sol": "06:34",
-      "ok": true
+      "ok": false,
+      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     },
     "grumari": {
       "nome": "Grumari",
-      "temp_min_c": 19,
-      "temp_max_janela_c": 20,
-      "temp_med_c": 20,
-      "sensacao_min_c": 22,
-      "sensacao_largada_c": 22,
-      "sensacao_final_c": 23,
-      "umidade_max_pct": 96,
-      "visibilidade_min_m": 420.0,
-      "risco_neblina": "alto",
-      "chuva_prob_max_pct": 41,
-      "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 7.2,
-      "rajada_max_kmh": 16.2,
-      "vento_dir_graus": 309,
-      "vento_dir_cardeal": "NO",
-      "nascer_do_sol": "06:35",
-      "ok": true
+      "ok": false,
+      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
     }
   }
 }
