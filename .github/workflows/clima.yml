@@ -1,12 +1,10 @@
 name: Coletar Clima Pedal Rio
 
 on:
-  schedule:
-    # GitHub Actions uses UTC. Target: run by 18:00 BRT (21:00 UTC),
-    # giving ~2h buffer before the 20:00 BRT Routine reads the file.
-    # BRT = UTC - 3.
-    - cron: '0 21 * * *'
-  workflow_dispatch:   # allows manual run from the GitHub website
+    schedule:
+    - cron: '17 20 * * *'   # ~17:17 BRT — tentativa principal
+    - cron: '17 22 * * *'   # ~19:17 BRT — retry de segurança
+  workflow_dispatch:
 
 permissions:
   contents: write   # required for the workflow to commit the file to the repo
