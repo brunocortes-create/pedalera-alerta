@@ -1,22 +1,70 @@
 {
-  "gerado_em": "2026-07-03T20:48:33.993792-03:00",
-  "data_alvo": "2026-07-04",
+  "gerado_em": "2026-07-04T05:13:32.656517-03:00",
+  "data_alvo": "2026-07-05",
   "fonte": "Open-Meteo",
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "temp_min_c": 19,
+      "temp_max_janela_c": 19,
+      "temp_med_c": 19,
+      "sensacao_min_c": 19,
+      "sensacao_largada_c": 19,
+      "sensacao_final_c": 19,
+      "umidade_max_pct": 93,
+      "visibilidade_min_m": 8500.0,
+      "risco_neblina": "baixo",
+      "chuva_prob_max_pct": 83,
+      "chuva_mm_total": 0.7,
+      "chuva_mm_madrugada_antes": 0.8,
+      "vento_med_kmh": 14.4,
+      "rajada_max_kmh": 28.1,
+      "vento_dir_graus": 222,
+      "vento_dir_cardeal": "SO",
+      "nascer_do_sol": "06:35",
+      "ok": true
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "temp_min_c": 19,
+      "temp_max_janela_c": 20,
+      "temp_med_c": 19,
+      "sensacao_min_c": 20,
+      "sensacao_largada_c": 20,
+      "sensacao_final_c": 20,
+      "umidade_max_pct": 90,
+      "visibilidade_min_m": 9060.0,
+      "risco_neblina": "baixo",
+      "chuva_prob_max_pct": 33,
+      "chuva_mm_total": 0.3,
+      "chuva_mm_madrugada_antes": 0.6,
+      "vento_med_kmh": 13.2,
+      "rajada_max_kmh": 31.3,
+      "vento_dir_graus": 225,
+      "vento_dir_cardeal": "SO",
+      "nascer_do_sol": "06:34",
+      "ok": true
     },
     "grumari": {
       "nome": "Grumari",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+      "temp_min_c": 18,
+      "temp_max_janela_c": 19,
+      "temp_med_c": 19,
+      "sensacao_min_c": 19,
+      "sensacao_largada_c": 19,
+      "sensacao_final_c": 19,
+      "umidade_max_pct": 93,
+      "visibilidade_min_m": 8500.0,
+      "risco_neblina": "baixo",
+      "chuva_prob_max_pct": 83,
+      "chuva_mm_total": 0.7,
+      "chuva_mm_madrugada_antes": 0.8,
+      "vento_med_kmh": 14.4,
+      "rajada_max_kmh": 28.1,
+      "vento_dir_graus": 222,
+      "vento_dir_cardeal": "SO",
+      "nascer_do_sol": "06:35",
+      "ok": true
     }
   }
 }
