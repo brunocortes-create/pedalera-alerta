@@ -19,14 +19,14 @@ Status: programada
 Última verificação: junho/2026 (data exata pendente — preencher ao confirmar)
 
 APCC Parque Deodoro
-Dias/horários: terças e quintas, 6h às 8h30
-Status: programada
-Última verificação: junho/2026 (data exata pendente — preencher ao confirmar)
 
-⚠️ SÁBADO: fonte externa (2024) indica que sábado NÃO é APCC neste local —
-é APTT (Área de Proteção ao Treinamento de Triatlo), 6h30 às 9h. NÃO listar
-como "APCC" no sábado até confirmação com o clube. Pode citar como:
-"Sáb em Deodoro: APTT (triatlo) 6h30–9h — confirme antes de ir."
+Status: FORA DE COBERTURA — não citar no boletim diário/semanal.
+
+Motivo: fora dos 6 blocos de rota cobertos (doc de visão geral) e sem qualquer verificação de rua possível via rede do Bruno (nenhum membro do grupo pedala nessa região). Confirmado em 04/07/2026.
+
+Dados de referência, só para registro (NÃO usar sem revalidar): terças e quintas ~6h–8h30 = APCC; sábados ~6h–9h = APTT (triatlo, não ciclismo de competição) — confirmado por 2 fontes (pedal.com.br 2024 e prefeitura.rio), com divergência de ~30min no horário exato entre elas.
+
+Reativar apenas se o Bruno decidir expandir cobertura E obtiver verificação de rua.
 
 APCC Madureira — Circuito Danilo Diver
 Dias/horários: terças e quintas, 4h às 5h30
