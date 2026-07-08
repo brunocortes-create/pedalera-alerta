@@ -28,6 +28,7 @@ Valores aproximados, calibrados pela geografia da orla — ajustar conforme feed
 - Eixo: ~85° / ~265°, com subida; em subida, reporte rajadas e piso molhado,
   não contra/favor
 - Observação: ponto crítico de vento lateral nas partes altas do elevado.
+- Nota: Bloco Joá = SUBIDA do elevado (Estrada do Joá/Vista Chinesa), não o túnel. Ciclistas usam ciclovia própria, separada da via de veículos. O fechamento do Túnel do Joá para carros (madrugadas de quarta, até 4h30, fonte COR) NÃO afeta ciclistas — NÃO citar como alerta/interdição no boletim. Confirmado por observação de rua do Bruno em 09/07/2026.
 
 ## 🏙️ Bloco 4 — Orla Zona Sul + Aterro
 - Trechos: Leblon → Ipanema (eixo ~85°/265°), Copacabana/Leme (eixo ~45°/225°),
@@ -54,6 +55,16 @@ Valores aproximados, calibrados pela geografia da orla — ajustar conforme feed
 Zona Norte, Niterói/Região Oceânica e Baixada ficam fora da v1 do boletim.
 Niterói está fora do município (COR não cobre). Avaliar inclusão conforme
 o canal crescer e aparecerem pedidos.
+
+## Exemplos resolvidos de vento (para evitar inversão de contra/favor)
+
+Regra: comparar vento_dir_graus com o azimute do trecho. Diferença < 90° = A FAVOR nesse sentido; diferença > 90° = CONTRA; próximo de 90° = LATERAL.
+
+Exemplo 1 — Orla ZS, Leblon→Ipanema→Copacabana→Leme (azimute ida ~85°): vento SO (~225°): diferença = |225-85| = 140° → CONTRA na ida (rumo Leme), A FAVOR na volta (rumo Leblon/Posto 6).
+
+[Nota: este trecho já teve a direção invertida 3 vezes em boletins anteriores — conferir sempre com essa conta antes de publicar.]
+
+Exemplo 2 — Barra-Recreio/Grumari, ida Recreio→Grumari (azimute ~65-70°): vento SO (~225°): diferença = |225-70| = 155° → CONTRA na ida, A FAVOR na volta.
 
 # ───────────────────────────────────────────────────────────
 # NOTAS DE MICROCLIMA (conhecimento local — vantagem do Pedal Rio)
