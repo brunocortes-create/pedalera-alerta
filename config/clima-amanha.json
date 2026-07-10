@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-09T18:00:45.862639-03:00",
+  "gerado_em": "2026-07-09T21:18:13.028053-03:00",
   "data_alvo": "2026-07-10",
   "fonte": "Open-Meteo",
   "pontos": {
@@ -27,11 +27,11 @@
     "zona_sul": {
       "nome": "Zona Sul",
       "temp_min_c": 16,
-      "temp_max_janela_c": 17,
+      "temp_max_janela_c": 18,
       "temp_med_c": 17,
       "sensacao_min_c": 17,
-      "sensacao_largada_c": 18,
-      "sensacao_final_c": 18,
+      "sensacao_largada_c": 17,
+      "sensacao_final_c": 19,
       "umidade_max_pct": 97,
       "visibilidade_min_m": 160.0,
       "risco_neblina": "alto",
@@ -48,7 +48,7 @@
     "grumari": {
       "nome": "Grumari",
       "temp_min_c": 16,
-      "temp_max_janela_c": 17,
+      "temp_max_janela_c": 18,
       "temp_med_c": 16,
       "sensacao_min_c": 16,
       "sensacao_largada_c": 16,
