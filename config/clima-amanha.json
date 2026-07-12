@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-07-12T18:00:52.382764-03:00",
+  "gerado_em": "2026-07-12T20:11:44.519559-03:00",
   "data_alvo": "2026-07-13",
   "fonte": "Open-Meteo",
   "pontos": {
@@ -14,7 +14,7 @@
       "umidade_max_pct": 75,
       "visibilidade_min_m": 28440.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 16,
+      "chuva_prob_max_pct": 35,
       "chuva_mm_total": 0.1,
       "chuva_mm_madrugada_antes": 0.0,
       "vento_med_kmh": 21.3,
@@ -35,7 +35,7 @@
       "umidade_max_pct": 76,
       "visibilidade_min_m": 14260.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 36,
+      "chuva_prob_max_pct": 61,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.2,
       "vento_med_kmh": 18.4,
@@ -56,7 +56,7 @@
       "umidade_max_pct": 75,
       "visibilidade_min_m": 28440.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 16,
+      "chuva_prob_max_pct": 35,
       "chuva_mm_total": 0.1,
       "chuva_mm_madrugada_antes": 0.0,
       "vento_med_kmh": 21.3,
