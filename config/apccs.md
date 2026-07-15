@@ -6,17 +6,17 @@ a cada execução. Atualize aqui sempre que houver mudança.
 APCC Porto — Circuito Marcos Hama (Av. Rodrigues Alves / Orla Conde)
 Dias/horários: domingos e feriados, 6h às 8h
 Status: programada
-Última verificação: junho/2026 (data exata pendente — preencher ao confirmar)
+Última verificação: julho/2026, via fontes oficiais (aviso COR dez/2025 + página de interdições permanentes cor.rio). Confirmação direta com clube: pendente.
 
 APCC Aterro do Flamengo — Circuito Pedro Nikolay
 Dias/horários: terças e quintas, 4h às 5h30 (EXCETO feriados)
 Status: programada
-Última verificação: junho/2026 (data exata pendente — preencher ao confirmar)
+Última verificação: julho/2026, via fontes oficiais (aviso COR dez/2025 + página de interdições permanentes cor.rio). Confirmação direta com clube: pendente.
 
 APCC Reserva (Av. Lúcio Costa) — Circuito Guilherme Paiva
 Dias/horários: terças e quintas, 4h às 5h30 (EXCETO feriados)
 Status: programada
-Última verificação: junho/2026 (data exata pendente — preencher ao confirmar)
+Última verificação: julho/2026, via fontes oficiais (aviso COR dez/2025 + página de interdições permanentes cor.rio). Confirmação direta com clube: pendente.
 
 APCC Parque Deodoro
 
