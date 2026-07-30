@@ -2,46 +2,344 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Câmeras Pedal Rio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0F24">
+<meta name="description" content="Câmeras ao vivo por trecho de pedal no Rio de Janeiro. Confira a pista antes de sair.">
+<title>Câmeras · Pedal Rio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noite:#0A0F24;
+    --bruma:#141B38;
+    --asfalto:#2A3560;
+    --farol:#F5C451;
+    --sal:#E8ECF7;
+    --apagado:#808DB4;
+    --display:"Barlow Condensed",Haettenschweiler,"Arial Narrow",sans-serif;
+    --corpo:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --dado:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--noite);
+    color:var(--sal);
+    font-family:var(--corpo);
+    font-size:16px;
+    line-height:1.5;
+    padding:0 20px calc(48px + env(safe-area-inset-bottom));
+    max-width:640px;
+    margin-inline:auto;
+  }
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--farol);outline-offset:3px;}
+
+  /* ---------- cabeçalho ---------- */
+  .topo{padding:32px 0 20px;}
+  .marca{
+    font-family:var(--dado);
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--farol);
+    margin:0 0 6px;
+  }
+  .titulo{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(46px,15vw,66px);
+    line-height:.88;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
+    margin:0;
+  }
+  .subtitulo{
+    color:var(--apagado);
+    font-size:14.5px;
+    margin:12px 0 0;
+    max-width:34ch;
+  }
+
+  /* ---------- faixa do horizonte (elemento assinatura) ---------- */
+  .horizonte{
+    margin:28px 0 36px;
+    padding:18px 16px 14px;
+    background:var(--bruma);
+    border:1px solid var(--asfalto);
+    border-radius:14px;
+  }
+  .barra{
+    position:relative;
+    height:10px;
+    border-radius:99px;
+    background:linear-gradient(90deg,#070B1B 0%,#101838 35%,#2A2F55 62%,#7A5C3E 82%,var(--farol) 100%);
+    margin:20px 0 8px;
+  }
+  .marcador{
+    position:absolute;top:50%;width:2px;height:22px;
+    transform:translate(-50%,-50%);
+    background:var(--sal);
+  }
+  .marcador::after{
+    content:attr(data-rotulo);
+    position:absolute;left:50%;top:-19px;
+    transform:translateX(-50%);
+    font-family:var(--dado);font-size:10px;letter-spacing:.06em;
+    color:var(--sal);white-space:nowrap;
+  }
+  .marcador.sol{background:var(--farol);height:16px;}
+  .marcador.sol::after{color:var(--farol);top:auto;bottom:-19px;}
+  .escala{
+    display:flex;justify-content:space-between;
+    font-family:var(--dado);font-size:10px;color:var(--apagado);
+    letter-spacing:.06em;
+  }
+  .leitura{
+    font-size:14.5px;
+    margin:14px 0 0;
+    padding-top:13px;
+    border-top:1px solid var(--asfalto);
+    color:var(--sal);
+  }
+  .leitura strong{color:var(--farol);font-weight:600;}
+
+  /* ---------- blocos de rota ---------- */
+  .bloco{margin:0 0 34px;}
+  .bloco h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:23px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    margin:0 0 2px;
+    display:flex;align-items:baseline;gap:10px;
+  }
+  .bloco h2::after{
+    content:"";flex:1;height:1px;background:var(--asfalto);
+  }
+  .camera{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 16px;
+    margin-top:10px;
+    background:var(--bruma);
+    border:1px solid var(--asfalto);
+    border-radius:12px;
+    text-decoration:none;
+    transition:border-color .15s ease,background .15s ease;
+  }
+  .camera:hover,.camera:active{border-color:var(--farol);background:#18204250;}
+  .camera .nome{
+    font-weight:600;font-size:17px;line-height:1.25;
+  }
+  .camera .via{
+    display:block;font-weight:400;font-size:13px;color:var(--apagado);margin-top:3px;
+  }
+  .camera .corpo{flex:1;min-width:0;}
+  .camera .seta{color:var(--apagado);font-size:20px;line-height:1;flex:none;}
+  .selo{
+    display:inline-block;
+    font-family:var(--dado);font-size:10px;letter-spacing:.07em;
+    text-transform:uppercase;
+    padding:3px 7px;border-radius:5px;margin-top:8px;
+  }
+  .selo.ok{color:var(--farol);border:1px solid #6A5628;background:#2A2312;}
+  .selo.na{color:var(--apagado);border:1px solid var(--asfalto);}
+  .semcamera{
+    margin-top:10px;padding:15px 16px;
+    border:1px dashed var(--asfalto);border-radius:12px;
+    color:var(--apagado);font-size:14.5px;
+  }
+  .semcamera b{color:var(--sal);font-weight:600;}
+
+  /* ---------- rodapé ---------- */
+  .rodape{
+    margin-top:44px;padding-top:20px;
+    border-top:1px solid var(--asfalto);
+    font-size:13px;color:var(--apagado);
+  }
+  .rodape a{color:var(--farol);}
+  .rodape p{margin:0 0 9px;}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;animation:none !important;}
+  }
+</style>
 </head>
 <body>
 
-<h1>Câmeras Pedal Rio</h1>
-<p>Confira as condições dos trechos antes de sair. Toque em um link para abrir a câmera ao vivo em uma nova aba.</p>
+<header class="topo">
+  <p class="marca">Pedal Rio</p>
+  <h1 class="titulo">Câmeras<br>ao vivo</h1>
+  <p class="subtitulo">Confira a pista do seu trecho antes de sair. Toque no ponto mais perto de onde você larga.</p>
+</header>
 
-<h2>Bloco 1 — Orla Barra–Recreio</h2>
-<p><a href="https://www.camerasrj.com.br/camera/61/" target="_blank" rel="noopener">Barra da Tijuca</a><br>
-Fonte: camerasrj.com.br — Av. Lúcio Costa x Posto 5</p>
-<p><a href="https://www.camerasrj.com.br/camera/891/" target="_blank" rel="noopener">Recreio</a><br>
-Fonte: camerasrj.com.br — Av. Lúcio Costa x Rua Albert Sabin</p>
+<!-- ELEMENTO VIVO: calcula sozinho o nascer do sol do dia. Não precisa atualizar nada. -->
+<section class="horizonte" aria-live="polite">
+  <div class="barra">
+    <span class="marcador sol" id="mSol" data-rotulo="—" style="left:50%"></span>
+    <span class="marcador" id="mAgora" data-rotulo="agora" style="left:20%"></span>
+  </div>
+  <div class="escala"><span>00h</span><span>06h</span><span>12h</span></div>
+  <p class="leitura" id="leitura">Carregando horário…</p>
+</section>
 
-<h2>Bloco 2 — Grumari–Prainha–Grota Funda</h2>
-<p>Sem câmera pública disponível neste trecho — reforce farol e atenção redobrada.</p>
+<!-- =======================================================================
+     COMO EDITAR ESTA PÁGINA
+     - Para trocar uma câmera: mude o link em href="..." e o texto do nome.
+     - Para adicionar: copie um bloco <a class="camera"> inteiro e cole abaixo.
+     - Selo: use  <span class="selo ok">visível no escuro</span>  só depois de
+       confirmar na madrugada. Antes disso use  <span class="selo na">...
+     - Atualize a data de verificação no rodapé quando revisar os links.
+     ======================================================================= -->
 
-<h2>Bloco 3 — Joá</h2>
-<p><a href="https://www.camerasrj.com.br/camera/122/" target="_blank" rel="noopener">Joá</a><br>
-Fonte: camerasrj.com.br — Autoestrada x Estr. do Joá, próximo ao túnel de São Conrado</p>
+<section class="bloco">
+  <h2>Orla Barra–Recreio</h2>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/61/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Barra da Tijuca
+        <span class="via">Av. Lúcio Costa, altura do Posto 5</span>
+      </span>
+      <span class="selo ok">visível no escuro</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/891/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Recreio
+        <span class="via">Av. Lúcio Costa x Rua Albert Sabin</span>
+      </span>
+      <span class="selo ok">visível no escuro</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+</section>
 
-<h2>Bloco 4 — Orla ZS + Aterro</h2>
-<p><a href="https://www.camerasrj.com.br/camera/25/" target="_blank" rel="noopener">Copacabana</a><br>
-Fonte: camerasrj.com.br — Av. Atlântica x Av. Princesa Isabel</p>
-<p><a href="https://www.camerasrj.com.br/camera/20/" target="_blank" rel="noopener">Aterro do Flamengo</a><br>
-Fonte: camerasrj.com.br — Aterro x Av. Oswaldo Cruz</p>
+<section class="bloco">
+  <h2>Grumari–Prainha–Grota</h2>
+  <p class="semcamera"><b>Sem câmera pública neste trecho.</b> Não há transmissão aberta para a Estrada do Pontal nem para a Grota Funda. Reforce farol dianteiro e traseiro e ande em grupo.</p>
+</section>
 
-<h2>Bloco 5 — Subidas ZS</h2>
-<p>Sem câmera pública disponível neste trecho.</p>
+<section class="bloco">
+  <h2>Joá</h2>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/122/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Elevado do Joá
+        <span class="via">Autoestrada x Estr. do Joá, perto do túnel de São Conrado</span>
+      </span>
+      <span class="selo na">imagem noturna não testada</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+</section>
 
-<h2>Bloco 6 — Centro/Porto</h2>
-<p><a href="https://www.camerasrj.com.br/camera/4325/" target="_blank" rel="noopener">Centro/Porto</a><br>
-Fonte: camerasrj.com.br — Praça Mauá (Museu do Amanhã / início da Orla Conde)</p>
+<section class="bloco">
+  <h2>Orla ZS + Aterro</h2>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/25/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Copacabana
+        <span class="via">Av. Atlântica x Av. Princesa Isabel</span>
+      </span>
+      <span class="selo na">imagem noturna não testada</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/20/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Aterro do Flamengo
+        <span class="via">Aterro x Av. Oswaldo Cruz</span>
+      </span>
+      <span class="selo na">imagem noturna não testada</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+</section>
 
-<hr>
-<p><small>
-Câmeras de trânsito públicas (não são específicas para ciclismo — mostram tráfego geral da via). Antes do nascer do sol pode não haver imagem visível por falta de luz. Fonte: camerasrj.com.br.<br>
-Última verificação dos links: 30/07/2026.<br>
-Voltar ao <a href="https://chat.whatsapp.com/I2MrUmgBdP7Bx4u66FMYrA">grupo Pedal Rio</a>.
-</small></p>
+<section class="bloco">
+  <h2>Subidas ZS</h2>
+  <p class="semcamera"><b>Sem câmera pública neste trecho.</b> Vista Chinesa, Paineiras e Canoas não têm transmissão aberta. Estrada de mata: atenção a galho e folha molhada no piso.</p>
+</section>
 
+<section class="bloco">
+  <h2>Centro/Porto</h2>
+  <a class="camera" href="https://www.camerasrj.com.br/camera/4325/" target="_blank" rel="noopener">
+    <span class="corpo">
+      <span class="nome">Praça Mauá
+        <span class="via">Museu do Amanhã, início da Orla Conde — enquadramento pega pouco asfalto</span>
+      </span>
+      <span class="selo na">imagem noturna não testada</span>
+    </span>
+    <span class="seta" aria-hidden="true">→</span>
+  </a>
+</section>
+
+<footer class="rodape">
+  <p>São câmeras públicas de trânsito, não são feitas para ciclismo — mostram o tráfego geral da via. Fonte: <a href="https://www.camerasrj.com.br/" target="_blank" rel="noopener">camerasrj.com.br</a>, que aponta para os sinais oficiais e não hospeda as transmissões.</p>
+  <p>Links verificados em 31/07/2026.</p>
+  <p>Voltar ao <a href="https://chat.whatsapp.com/I2MrUmgBdP7Bx4u66FMYrA">grupo Pedal Rio</a>.</p>
+</footer>
+
+<script>
+(function(){
+  var LAT=-23.00, LON=-43.40, TZ=-3;
+
+  function nascerDoSol(d){
+    var rad=Math.PI/180;
+    var dias=Math.floor((d-Date.UTC(2000,0,1,12,0,0))/86400000);
+    var n=dias-LON/360;
+    var M=(357.5291+0.98560028*n)%360;
+    var C=1.9148*Math.sin(M*rad)+0.0200*Math.sin(2*M*rad)+0.0003*Math.sin(3*M*rad);
+    var L=(M+C+180+102.9372)%360;
+    var Jt=2451545.0+n+0.0053*Math.sin(M*rad)-0.0069*Math.sin(2*L*rad);
+    var dec=Math.asin(Math.sin(L*rad)*Math.sin(23.4397*rad))/rad;
+    var cosW=(Math.sin(-0.833*rad)-Math.sin(LAT*rad)*Math.sin(dec*rad))/(Math.cos(LAT*rad)*Math.cos(dec*rad));
+    if(cosW>1||cosW<-1) return null;
+    var w=Math.acos(cosW)/rad;
+    return (Jt-w/360-2440587.5)*86400000;
+  }
+
+  function hhmm(min){
+    var h=Math.floor(min/60), m=Math.round(min%60);
+    return (h<10?'0':'')+h+':'+(m<10?'0':'')+m;
+  }
+
+  function render(){
+    // hora de Brasília, independente do fuso do aparelho
+    var agora=new Date();
+    var utc=agora.getTime()+agora.getTimezoneOffset()*60000;
+    var rio=new Date(utc+TZ*3600000);
+    var minAgora=rio.getHours()*60+rio.getMinutes();
+
+    var meiaNoiteUTC=Date.UTC(rio.getFullYear(),rio.getMonth(),rio.getDate(),12,0,0);
+    var ms=nascerDoSol(meiaNoiteUTC);
+    var sol=new Date(ms+TZ*3600000);
+    var minSol=sol.getUTCHours()*60+sol.getUTCMinutes();
+
+    document.getElementById('mSol').style.left=Math.min(100,minSol/720*100)+'%';
+    document.getElementById('mSol').setAttribute('data-rotulo','sol '+hhmm(minSol));
+    document.getElementById('mAgora').style.left=Math.max(0,Math.min(100,minAgora/720*100))+'%';
+    document.getElementById('mAgora').setAttribute('data-rotulo',hhmm(minAgora));
+
+    var falta=minSol-minAgora, txt;
+    if(minAgora>720){
+      txt='Já é dia. As câmeras rendem bem agora — o teste que importa é de madrugada.';
+    }else if(falta>0){
+      var h=Math.floor(falta/60), m=falta%60;
+      txt='Faltam <strong>'+(h>0?h+'h':'')+(m>0?(h>0?' ':'')+m+'min':'')+'</strong> para o sol nascer, às '+hhmm(minSol)+
+          '. Está escuro: só os pontos marcados como <strong>visíveis no escuro</strong> costumam render imagem útil.';
+    }else if(falta>-45){
+      txt='<strong>Amanhecendo.</strong> As imagens começam a render nos próximos minutos.';
+    }else{
+      txt='<strong>Já claro.</strong> Todas as câmeras devem mostrar a pista.';
+    }
+    document.getElementById('leitura').innerHTML=txt;
+  }
+
+  render();
+  setInterval(render,60000);
+})();
+</script>
 </body>
 </html>
