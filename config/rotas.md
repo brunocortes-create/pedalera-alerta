@@ -28,7 +28,7 @@ Valores aproximados, calibrados pela geografia da orla — ajustar conforme feed
 - Eixo: ~85° / ~265°, com subida; em subida, reporte rajadas e piso molhado,
   não contra/favor
 - Observação: ponto crítico de vento lateral nas partes altas do elevado.
-- Nota: Bloco Joá = SUBIDA do elevado (Estrada do Joá/Vista Chinesa), não o túnel. Ciclistas usam ciclovia própria, separada da via de veículos. O fechamento do Túnel do Joá para carros (madrugadas de quarta, até 4h30, fonte COR) NÃO afeta ciclistas — NÃO citar como alerta/interdição no boletim. Confirmado por observação de rua do Bruno em 09/07/2026.
+- Nota: Bloco Joá = SUBIDA do elevado (Estrada do Joá), não o túnel. Ciclistas usam ciclovia própria, separada da via de veículos. O fechamento do Túnel do Joá para carros (madrugadas de quarta, até 4h30, fonte COR) NÃO afeta ciclistas — NÃO citar como alerta/interdição no boletim. Confirmado por observação de rua do Bruno em 09/07/2026.
 
 ## 🏙️ Bloco 4 — Orla Zona Sul + Aterro
 - Trechos: Leblon → Ipanema (eixo ~85°/265°), Copacabana/Leme (eixo ~45°/225°),
@@ -56,15 +56,21 @@ Zona Norte, Niterói/Região Oceânica e Baixada ficam fora da v1 do boletim.
 Niterói está fora do município (COR não cobre). Avaliar inclusão conforme
 o canal crescer e aparecerem pedidos.
 
-## Exemplos resolvidos de vento (para evitar inversão de contra/favor)
+## Exemplos resolvidos de vento (conferidos — NÃO inverter)
 
-Regra: comparar vento_dir_graus com o azimute do trecho. Diferença < 90° = A FAVOR nesse sentido; diferença > 90° = CONTRA; próximo de 90° = LATERAL.
+REGRA (idêntica à do prompt-mestre da Routine; em caso de divergência, o prompt vence): vento_dir_graus é a direção DE ONDE o vento vem.
+diff = menor ângulo entre vento_dir_graus e o rumo do trecho (0-180°).
+- diff < 45°  → CONTRA (vento de proa)
+- diff > 135° → A FAVOR (vento de popa)
+- 45°-135°    → LATERAL
 
-Exemplo 1 — Orla ZS, Leblon→Ipanema→Copacabana→Leme (azimute ida ~85°): vento SO (~225°): diferença = |225-85| = 140° → CONTRA na ida (rumo Leme), A FAVOR na volta (rumo Leblon/Posto 6).
+Exemplo 1 — Orla ZS, Leblon→Ipanema→Copacabana→Leme, ida rumo ~85°. Vento de SO (225°): diff = |225-85| = 140° → maior que 135° → A FAVOR na ida (rumo Leme). Na volta (rumo 265°): diff = |225-265| = 40° → CONTRA.
 
-[Nota: este trecho já teve a direção invertida 3 vezes em boletins anteriores — conferir sempre com essa conta antes de publicar.]
+Exemplo 2 — Barra-Recreio, ida Recreio→Quebra-Mar, rumo ~70°. Vento de E/NE (60°): diff = 10° → CONTRA na ida. Volta (rumo 250°): diff = 170° → A FAVOR. Confere com a Observação do Bloco 1.
 
-Exemplo 2 — Barra-Recreio/Grumari, ida Recreio→Grumari (azimute ~65-70°): vento SO (~225°): diferença = |225-70| = 155° → CONTRA na ida, A FAVOR na volta.
+Exemplo 3 — Barra-Recreio, ida rumo ~70°. Vento de SO (225°): diff = 155° → A FAVOR na ida. Volta (rumo 250°): diff = 25° → CONTRA. Confere com a Observação do Bloco 1 ("vento de SO/O = contra na volta").
+
+⚠️ HISTÓRICO — não reintroduzir: até 03/08/2026 esta seção continha a regra INVERTIDA ("diff < 90° = A FAVOR"), que contradizia as Observações de cada bloco deste mesmo arquivo e foi a causa raiz de 3 inversões de vento em boletins publicados. Qualquer edição futura desta seção deve ser conferida contra as Observações dos blocos antes de commitar.
 
 # ───────────────────────────────────────────────────────────
 # NOTAS DE MICROCLIMA (conhecimento local — vantagem do Pedal Rio)
