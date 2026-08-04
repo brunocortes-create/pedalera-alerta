@@ -37,6 +37,24 @@ Status: programada
 confirmada com clube/federação. Manter "(confirmar com o clube)" sempre até
 primeira verificação humana.
 
+EXCEÇÕES CONFIRMADAS — precedência sobre a agenda acima
+Antes de listar qualquer APCC no boletim, checar esta seção primeiro.
+Exceção vence agenda. Não listar APCC cancelada nem como "programada".
+
+- 09/08/2026 (domingo): APCC Porto / Circuito Marcos Hama CANCELADA.
+  Motivo: IRONMAN 70.3 Rio de Janeiro (Copacabana - Marina da Gloria).
+  Fonte: @APCCRJ (Instagram), verificado em 04/08/2026.
+  Blocos afetados: Centro/Porto e Orla ZS + Aterro.
+
+- 16/08/2026 (domingo): APCC Porto / Circuito Marcos Hama CANCELADA.
+  Motivo: 28a Meia Maratona Internacional do Rio. Largada Leblon,
+  chegada Aterro do Flamengo, provas a partir das 6h05.
+  Fonte: @APCCRJ (Instagram), verificado em 04/08/2026.
+  Blocos afetados: Orla ZS + Aterro e Centro/Porto.
+
+Manutenção: conferir @APCCRJ e cor.rio semanalmente (domingo a noite) e
+registrar aqui qualquer cancelamento anunciado.
+
 Regras para a rotina
 - Nunca escrever "APCC ativa" no boletim — escrever "APCC programada".
   Este arquivo é AGENDA, não status do dia.
