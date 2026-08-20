@@ -97,3 +97,44 @@ Exemplo 3 — Barra-Recreio, ida rumo ~70°. Vento de SO (225°): diff = 155° �
   atenção ao piso."
 - AÇÃO DO EDITOR: confirmar em 2-3 madrugadas se o padrão se repete. Se sim,
   mudar Status para ATIVA.
+
+# ───────────────────────────────────────────────────────────
+# AVISOS DE RUA (relatos de membros — obstáculos físicos)
+# ───────────────────────────────────────────────────────────
+# COMO FUNCIONA:
+# Obstáculo físico fixo na via ou ciclovia, relatado por membro do grupo.
+# Diferente de microclima: NÃO exige segunda observação para entrar. O
+# custo de avisar é baixo; o de não avisar é alto.
+# SEMPRE publicar com atribuição: "relato de membro (data), não verificado
+# por nós". NUNCA apresentar como constatação do boletim.
+#
+# DENTRO dos 6 blocos  → linha própria dentro do bloco, logo após "Vento".
+# FORA dos 6 blocos    → linha própria antes das Interdições, marcada
+#                        "FORA DOS BLOCOS COBERTOS", removida após 7 dias.
+#
+# PERMANÊNCIA: aviso dentro de bloco sai TODO DIA até o editor registrar
+# baixa aqui. Não some sozinho. Ao confirmar o conserto, sai UMA VEZ com
+# "resolvido" e só então é removido deste arquivo.
+#
+# 1746: todo aviso publicado precisa de chamado aberto, número registrado.
+## ATIVO — Bloco 2 (Grumari–Prainha–Grota Funda)
+- Cratera na descida da Prainha, sentido mirante do Roncador, pouco antes
+  da fonte de água, no meio da pista junto à faixa amarela.
+- Relato de membro em 19/08/2026. Não verificado em campo.
+- Chamado 1746: [PREENCHER]
+- Texto do aviso: "🕳️ Relato de membro (19/08, não verificado por nós):
+  cratera na descida da Prainha, sentido mirante do Roncador, pouco antes
+  da fonte de água — no meio da pista, junto à faixa amarela. Descida
+  rápida e ainda escura às 5h. Atenção máxima nesse ponto."
+- Baixa: pendente
+## ATIVO — FORA DOS BLOCOS (Av. das Américas / Estrada do Rio Morto)
+- Cratera no final da Av. das Américas, na entrada da Estrada do Rio Morto,
+  lado esquerdo, embaixo do viaduto.
+- Relato de membro em 19/08/2026. Não verificado em campo.
+- Chamado 1746: [PREENCHER]
+- Publicar até 26/08/2026, depois remover.
+- Texto do aviso: "🕳️ FORA DOS BLOCOS COBERTOS — relato de membro (19/08,
+  não verificado por nós): cratera no final da Av. das Américas, na entrada
+  da Estrada do Rio Morto, lado esquerdo, embaixo do viaduto. O boletim não
+  cobre esse trecho, mas quem passa por ali, atenção."
+- Baixa: pendente
