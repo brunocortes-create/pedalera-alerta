@@ -109,6 +109,8 @@ Exemplo 3 — Barra-Recreio, ida rumo ~70°. Vento de SO (225°): diff = 155° �
 # por nós". NUNCA apresentar como constatação do boletim.
 #
 # DENTRO dos 6 blocos  → linha própria dentro do bloco, logo após "Vento".
+#                        No Bloco 6 (Centro/Porto), que não tem linha de
+#                        vento, entra logo após a linha "Pista".
 # FORA dos 6 blocos    → linha própria antes das Interdições, marcada
 #                        "FORA DOS BLOCOS COBERTOS", removida após 7 dias.
 #
@@ -116,7 +118,11 @@ Exemplo 3 — Barra-Recreio, ida rumo ~70°. Vento de SO (225°): diff = 155° �
 # baixa aqui. Não some sozinho. Ao confirmar o conserto, sai UMA VEZ com
 # "resolvido" e só então é removido deste arquivo.
 #
-# 1746: todo aviso publicado precisa de chamado aberto, número registrado.
+# 1746: a publicação do aviso NUNCA depende do chamado estar aberto.
+# Segurança primeiro. O chamado é obrigação do EDITOR, não pré-condição
+# do aviso. Prazo: abrir em até 48h do primeiro dia de publicação e
+# registrar o número neste arquivo. Campo "[PREENCHER]" NÃO impede
+# a publicação — o aviso sai normalmente.
 ## ATIVO — Bloco 2 (Grumari–Prainha–Grota Funda)
 - Cratera na descida da Prainha, sentido mirante do Roncador, pouco antes
   da fonte de água, no meio da pista junto à faixa amarela.
