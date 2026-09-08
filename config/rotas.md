@@ -123,28 +123,3 @@ Exemplo 3 — Barra-Recreio, ida rumo ~70°. Vento de SO (225°): diff = 155° �
 # do aviso. Prazo: abrir em até 48h do primeiro dia de publicação e
 # registrar o número neste arquivo. Campo "[PREENCHER]" NÃO impede
 # a publicação — o aviso sai normalmente.
-## ATIVO — Bloco 2 (Grumari–Prainha–Grota Funda)
-- Cratera na descida da Prainha, sentido mirante do Roncador, pouco antes
-  da fonte de água, no meio da pista junto à faixa amarela.
-- Relato de membro em 19/08/2026. Não verificado em campo.
-- Chamado 1746: RIO-33113750-4
-- Baixa informada pelo 1746 em 26/08/2026
-- Status: MANTIDO EM BLOCO — reparo NÃO confirmado na rua (Bruno passou no
-  local em 26/08 e o buraco continuava presente)
-- Texto do aviso: "🕳️ Relato de membro (19/08, não verificado por nós):
-  cratera na descida da Prainha, sentido mirante do Roncador, pouco antes
-  da fonte de água — no meio da pista, junto à faixa amarela. Descida
-  rápida e ainda escura às 5h. Atenção máxima nesse ponto."
-- Texto complementar do boletim: "1746 informou reparo em 26/08, ainda não confirmado na rua."
-- Baixa: pendente
-## ATIVO — FORA DOS BLOCOS (Av. das Américas / Estrada do Rio Morto)
-- Cratera no final da Av. das Américas, na entrada da Estrada do Rio Morto,
-  lado esquerdo, embaixo do viaduto.
-- Relato de membro em 19/08/2026. Não verificado em campo.
-- Chamado 1746: [PREENCHER]
-- Publicar até 26/08/2026, depois remover.
-- Texto do aviso: "🕳️ FORA DOS BLOCOS COBERTOS — relato de membro (19/08,
-  não verificado por nós): cratera no final da Av. das Américas, na entrada
-  da Estrada do Rio Morto, lado esquerdo, embaixo do viaduto. O boletim não
-  cobre esse trecho, mas quem passa por ali, atenção."
-- Baixa: pendente
