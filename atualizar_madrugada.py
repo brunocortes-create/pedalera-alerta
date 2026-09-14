@@ -57,10 +57,16 @@ def ler_alerta_rio():
                 continue
             saida = {}
             for chave, termos in ESTACOES.items():
-                for est in lista:
-                    nome = _norm(str(est.get("name") or est.get("nome") or est.get("estacao") or ""))
-                    if not nome or not any(t in nome for t in termos):
-                        continue
+                # ordem de preferencia: o 1o termo da lista vence se existir no feed
+                escolhida = None
+                for t in termos:
+                    for est in lista:
+                        nome = _norm(str(est.get("name") or est.get("nome") or est.get("estacao") or ""))
+                        if nome and t in nome:
+                            escolhida = est; break
+                    if escolhida: break
+                if escolhida:
+                    est = escolhida
                     d = est.get("data") if isinstance(est.get("data"), dict) else est
                     def num(*ks):
                         for k in ks:
@@ -76,7 +82,6 @@ def ler_alerta_rio():
                         "mm_24h": num("h24", "mm_24h", "24h"),
                         "lido_em": est.get("read_at") or est.get("data_hora") or d.get("read_at"),
                     }
-                    break
             if saida:
                 saida["_fonte"] = url
                 return saida
@@ -180,10 +185,18 @@ def main():
         }
 
     # 5. veredito geral (determinístico, templates fixos)
+    sem_vespera = all(saida["pontos"][k]["status"] == "sem_vespera" for k in saida["pontos"])
     if not saida["fontes"]["open_meteo"]:
         saida["status"] = "indisponivel"
         saida["titulo"] = "⚠️ Atualização das 3h não rodou"
         saida["resumo"] = "A fonte de clima não respondeu. Vale o boletim da noite — e confira o céu e a câmera do seu trecho antes de sair."
+    elif sem_vespera:
+        # sem boletim da vespera para comparar: so reporta a leitura, sem dizer que "nada mudou"
+        saida["status"] = "leitura"
+        saida["titulo"] = f"🕒 LEITURA DAS {saida['hora_local']}"
+        det = "; ".join(f"{saida['pontos'][k]['nome']}: {saida['pontos'][k]['agora']['chuva_prob_max_pct']:.0f}%"
+                        for k in saida["pontos"] if saida["pontos"][k]["agora"] and saida["pontos"][k]["agora"].get("ok"))
+        saida["resumo"] = f"Sem boletim da véspera pra comparar. Modelos agora, janela 4h–8h: {det}."
     elif piorou:
         saida["status"] = "mudou_pior"
         saida["titulo"] = "⚠️ MUDOU PRA PIOR"
