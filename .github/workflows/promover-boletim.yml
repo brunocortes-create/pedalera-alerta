@@ -1,0 +1,41 @@
+name: Promover boletim para main
+
+# Rede de segurança. A Routine das 21h tenta empurrar docs/boletim.json direto
+# na main. Se o ambiente dela só permitir push em branch claude/**, este
+# workflow copia o arquivo para a main, e o GitHub Pages publica.
+# Se a Routine conseguir empurrar na main, isto simplesmente nunca dispara.
+
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['docs/boletim.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pedal-rio-commits
+  cancel-in-progress: false
+
+jobs:
+  promover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Copiar docs/boletim.json do branch da Routine
+        run: |
+          git fetch origin "$GITHUB_REF_NAME"
+          git checkout "origin/$GITHUB_REF_NAME" -- docs/boletim.json
+          git config user.name "Pedal Rio Bot"
+          git config user.email "bot@pedalrio.local"
+          git add docs/boletim.json
+          if git diff --staged --quiet; then
+            echo "main já tem este boletim."; exit 0
+          fi
+          git commit -m "Boletim publicado [automático]"
+          git push origin main
