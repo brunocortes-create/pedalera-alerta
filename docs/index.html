@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0A0F24">
+<meta name="description" content="Boletim diário do pedal de madrugada no Rio de Janeiro: pista, chuva, vento, APCC e interdições por trecho. Atualização automática às 3h.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pedal Rio — Boletim do pedal de madrugada">
+<meta property="og:description" content="Pista, chuva, vento, APCC e interdições por trecho, todo dia às 21h. Atualização automática às 3h da madrugada.">
+<meta property="og:url" content="https://brunocortes-create.github.io/pedalera-alerta/">
+<meta property="og:locale" content="pt_BR">
+<title>Boletim · Pedal Rio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --noite:#0A0F24; --bruma:#141B38; --asfalto:#2A3560;
+    --farol:#F5C451; --sal:#E8ECF7; --apagado:#808DB4;
+    --ok:#7ED9A3; --alerta:#F5C451; --perigo:#FF7A7A; --info:#8FB8FF;
+    --display:"Barlow Condensed",Haettenschweiler,"Arial Narrow",sans-serif;
+    --corpo:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --dado:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--noite);color:var(--sal);font-family:var(--corpo);font-size:16px;line-height:1.5;
+       padding:0 18px calc(48px + env(safe-area-inset-bottom));max-width:640px;margin-inline:auto;}
+  a{color:inherit;}
+  :focus-visible{outline:2px solid var(--farol);outline-offset:3px;}
+
+  .topo{padding:28px 0 12px;}
+  .marca{font-family:var(--dado);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--farol);margin:0 0 6px;}
+  .titulo{font-family:var(--display);font-weight:700;font-size:clamp(44px,14vw,64px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin:0;}
+  .titulo small{display:block;font-size:.42em;letter-spacing:.06em;color:var(--apagado);font-weight:600;margin-top:6px;}
+  .subtitulo{color:var(--apagado);font-size:14.5px;margin:10px 0 0;}
+  .subtitulo b{color:var(--sal);font-weight:600;}
+
+  .acoes{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 8px;}
+  .btn{appearance:none;border:1px solid var(--asfalto);background:var(--bruma);color:var(--sal);font:inherit;font-weight:600;font-size:14px;
+       padding:10px 14px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+  .btn:hover,.btn:active{border-color:var(--farol);}
+  .btn.primario{background:var(--farol);color:#1a1400;border-color:var(--farol);}
+
+  /* cartão de atualização das 3h */
+  .atual{margin:18px 0 0;padding:16px;border-radius:14px;border:1px solid var(--asfalto);background:var(--bruma);}
+  .atual.confirmado{border-color:#2F6B4B;}
+  .atual.mudou_pior{border-color:#8A3A3A;background:#2A1518;}
+  .atual.mudou_melhor{border-color:#2F6B4B;background:#12251C;}
+  .atual.indisponivel,.atual.pendente{border-style:dashed;}
+  .atual .rot{font-family:var(--dado);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--apagado);margin:0 0 6px;}
+  .atual h2{font-family:var(--display);font-size:28px;line-height:1;margin:0 0 8px;text-transform:uppercase;letter-spacing:.02em;}
+  .atual.mudou_pior h2{color:var(--perigo);} .atual.mudou_melhor h2,.atual.confirmado h2{color:var(--ok);}
+  .atual p{margin:0 0 8px;font-size:15px;}
+  .atual .avisos p{margin:6px 0 0;color:var(--sal);}
+  .atual .pontos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px;}
+  .atual .pt{background:#0d132b;border:1px solid var(--asfalto);border-radius:9px;padding:8px 9px;font-size:12.5px;}
+  .atual .pt b{display:block;font-size:12px;color:var(--apagado);font-weight:500;margin-bottom:2px;}
+  .atual .pt span{font-family:var(--dado);font-size:13px;}
+  .atual .meta{font-size:12px;color:var(--apagado);margin:10px 0 0;}
+  @media (max-width:380px){.atual .pontos{grid-template-columns:1fr 1fr;}}
+
+  /* veredito */
+  .veredito{margin:18px 0 0;padding:18px 16px;border-radius:14px;background:var(--bruma);border:1px solid var(--asfalto);}
+  .veredito .v{font-family:var(--display);font-size:clamp(24px,7vw,32px);line-height:1.05;text-transform:uppercase;letter-spacing:.01em;margin:0;}
+  .veredito .v.seco{color:var(--ok);} .veredito .v.chuva{color:var(--perigo);} .veredito .v.instavel,.veredito .v.meio{color:var(--alerta);}
+  .veredito .v em{font-style:normal;font-family:var(--corpo);font-weight:500;font-size:15px;text-transform:none;letter-spacing:0;display:block;margin-top:8px;color:var(--sal);}
+  .cabecalho{margin:12px 0 0;padding:0;list-style:none;}
+  .cabecalho li{padding:9px 0;border-top:1px solid var(--asfalto);font-size:15px;}
+  .cabecalho li.neblina{color:var(--alerta);}
+
+  /* blocos de rota */
+  .blocos{margin-top:26px;}
+  .bloco{margin:0 0 14px;background:var(--bruma);border:1px solid var(--asfalto);border-radius:14px;padding:14px 16px 12px;}
+  .bloco.alerta{border-left:4px solid var(--alerta);} .bloco.ok{border-left:4px solid var(--ok);}
+  .bloco h2{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 8px;display:flex;align-items:center;gap:10px;}
+  .bloco h2 .st{margin-left:auto;font-size:18px;}
+  .bloco dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:14.5px;}
+  .bloco dt{color:var(--apagado);font-weight:500;} .bloco dd{margin:0;}
+  .bloco .extra{margin:8px 0 0;font-size:14px;color:var(--sal);}
+  .bloco .cams{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+  .bloco .cam{font-size:13px;font-weight:600;padding:7px 11px;border-radius:8px;border:1px solid var(--asfalto);text-decoration:none;background:#0d132b;}
+  .bloco .cam:hover{border-color:var(--farol);}
+  .bloco .semcam{font-size:13px;color:var(--apagado);margin-top:8px;}
+
+  /* rodapé editorial */
+  .secao{margin:22px 0 0;}
+  .secao h3{font-family:var(--display);font-size:20px;letter-spacing:.05em;text-transform:uppercase;margin:0 0 6px;display:flex;align-items:baseline;gap:10px;}
+  .secao h3::after{content:"";flex:1;height:1px;background:var(--asfalto);}
+  .secao p{margin:0 0 6px;font-size:15px;}
+  details.semanal{margin-top:26px;border:1px solid var(--asfalto);border-radius:14px;background:var(--bruma);padding:0 16px;}
+  details.semanal summary{cursor:pointer;padding:14px 0;font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.04em;list-style:none;display:flex;align-items:center;}
+  details.semanal summary::after{content:"+";margin-left:auto;color:var(--farol);font-size:26px;}
+  details.semanal[open] summary::after{content:"–";}
+  details.semanal pre{white-space:pre-wrap;font:inherit;font-size:14.5px;margin:0 0 16px;}
+  pre.bruto{white-space:pre-wrap;font:inherit;font-size:15px;background:var(--bruma);border:1px solid var(--asfalto);border-radius:14px;padding:16px;margin:18px 0 0;}
+
+  .rodape{margin-top:40px;padding-top:18px;border-top:1px solid var(--asfalto);font-size:13px;color:var(--apagado);}
+  .rodape a{color:var(--farol);} .rodape p{margin:0 0 8px;}
+  .vazio{margin:28px 0;padding:20px;border:1px dashed var(--asfalto);border-radius:14px;color:var(--apagado);}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--farol);color:#1a1400;font-weight:600;padding:10px 16px;border-radius:99px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;}
+  .toast.on{opacity:1;}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <p class="marca">Pedal Rio</p>
+  <h1 class="titulo" id="h1">Boletim<small id="h1data">carregando…</small></h1>
+  <p class="subtitulo" id="sub">Pista, chuva, vento, APCC e interdições por trecho. Janela 4h–8h.</p>
+  <div class="acoes">
+    <button class="btn primario" id="btnShare">↗ Compartilhar</button>
+    <button class="btn" id="btnCopy">⎘ Copiar boletim</button>
+    <a class="btn" href="cameras.html">📷 Câmeras</a>
+  </div>
+</header>
+
+<main id="app"><div class="vazio">Carregando o boletim…</div></main>
+
+<footer class="rodape">
+  <p id="rodapeGerado"></p>
+  <p>Novo boletim todo dia ~21h. Atualização automática ~3h15 da madrugada (modelos + pluviômetros do Alerta Rio). Fonte de clima: Open-Meteo, 5 modelos.</p>
+  <p>Viu algo na rua? Manda no <a href="https://chat.whatsapp.com/I2MrUmgBdP7Bx4u66FMYrA" target="_blank" rel="noopener">grupo Pedal Rio</a> que a gente repassa. 🚲</p>
+</footer>
+<div class="toast" id="toast">Copiado</div>
+
+<script>
+(function(){
+  var TZ=-3, BASE=location.pathname.replace(/[^\/]*$/,'');
+  var texto="", textoSemanal=null;
+
+  function agoraRio(){var a=new Date();return new Date(a.getTime()+a.getTimezoneOffset()*60000+TZ*3600000);}
+  function ymd(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+  function hhmm(iso){try{var m=/T(\d\d):(\d\d)/.exec(iso);return m?m[1]+':'+m[2]:'';}catch(e){return '';}}
+  function ddmm(s){var m=/(\d{4})-(\d\d)-(\d\d)/.exec(s||'');return m?m[3]+'/'+m[2]:'';}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function noVS(s){return s.replace(/️/g,'');}
+  function linkify(s){return esc(s).replace(/(https?:\/\/[^\s]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');}
+  function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('on');setTimeout(function(){el.classList.remove('on');},1600);}
+
+  var BLOCOS=['🌊','🏖','⛰','🏙','🚵','⚓'];
+  var VEREDITOS=['☀','🌤','🌧','⛈','🌦','🔀','🌀'];
+  function classeVeredito(l){
+    var n=noVS(l);
+    if(/INST[ÁA]VEL|DIVERG/i.test(n)) return 'instavel';
+    if(n.startsWith('⛈')||n.startsWith('🌧')) return 'chuva';
+    if(n.startsWith('🌦')||n.startsWith('🌤')) return 'meio';
+    if(n.startsWith('☀')) return 'seco';
+    return '';
+  }
+  function isBloco(l){var n=noVS(l);return BLOCOS.some(function(e){return n.startsWith(e);})&&n.indexOf(':')>0;}
+
+  // Parser do Formato A (o texto do WhatsApp é a fonte da verdade; a página só renderiza)
+  function parse(t){
+    var L=t.replace(/\r/g,'').split('\n'), i=0, out={titulo:'',sub:'',veredito:null,cab:[],blocos:[],rodape:[]};
+    out.titulo=L[0]||''; out.sub=L[1]||''; i=2;
+    // cabeçalho até o primeiro bloco
+    var cab=[];
+    for(;i<L.length&&!isBloco(L[i]);i++){ if(L[i].trim()) cab.push(L[i].trim()); }
+    if(cab.length){ out.veredito=cab.shift(); out.cab=cab; }
+    // blocos
+    while(i<L.length&&isBloco(L[i])){
+      var head=L[i].trim(), m=/^(.*?):\s*(.*)$/.exec(head), b={nome:m?m[1].trim():head,status:m?m[2].trim():'',campos:[],cams:[],semcam:'',extras:[]};
+      i++;
+      for(;i<L.length&&L[i].trim()!==''&&!isBloco(L[i]);i++){
+        var l=L[i].trim(), n=noVS(l);
+        if(n.startsWith('📷')){ var mm=/^📷\s*([^:]+):\s*(https?:\/\/\S+)/.exec(n); if(mm) b.cams.push({nome:mm[1].trim(),url:mm[2]}); else b.semcam=l.replace(/^📷\s*/,''); }
+        else { var mc=/^(Temperatura|Clima|Pista|Vento)\s*:\s*(.*)$/.exec(l); if(mc) b.campos.push([mc[1],mc[2]]); else b.extras.push(l); }
+      }
+      out.blocos.push(b);
+      while(i<L.length&&L[i].trim()==='') i++;
+    }
+    // rodapé: agrupa por linha-título
+    var sec=null;
+    for(;i<L.length;i++){
+      var l=L[i].trim(); if(!l) continue;
+      var n=noVS(l);
+      if(n.startsWith('📷 Todas')||n.startsWith('🌐')||n.startsWith('Viu algo')) continue; // já está na página
+      if(/^(🏁|📅|⚠️|⚠|🔄)/.test(l)){ sec={t:l,p:[]}; out.rodape.push(sec); }
+      else if(sec) sec.p.push(l); else out.rodape.push({t:'',p:[l]});
+    }
+    return out;
+  }
+
+  function renderBoletim(b, p){
+    var h='';
+    h+='<section class="veredito">';
+    if(p.veredito){
+      // manchete curta em cima, detalhe embaixo: corta no primeiro " — " ou ". "
+      var v=p.veredito, cut=-1, m1=v.indexOf(' — '), m2=v.search(/\.\s+(?=[A-ZÁÉÍÓÚ])/);
+      if(m1>0) cut=m1; if(m2>0&&(cut<0||m2<cut)) cut=m2;
+      var manchete=cut>0?v.slice(0,cut+(cut===m2?1:0)):v, detalhe=cut>0?v.slice(cut+(cut===m2?1:3)).trim():'';
+      h+='<p class="v '+classeVeredito(v)+'">'+esc(manchete)+(detalhe?'<em>'+esc(detalhe)+'</em>':'')+'</p>';
+    }
+    if(p.cab.length){ h+='<ul class="cabecalho">'+p.cab.map(function(l){return '<li class="'+(noVS(l).startsWith('🌫')?'neblina':'')+'">'+linkify(l)+'</li>';}).join('')+'</ul>'; }
+    h+='</section>';
+    if(p.blocos.length){
+      h+='<section class="blocos">';
+      p.blocos.forEach(function(bl){
+        var cls=noVS(bl.status).indexOf('⚠')>=0?'alerta':(noVS(bl.status).indexOf('✅')>=0?'ok':'');
+        h+='<article class="bloco '+cls+'"><h2>'+esc(bl.nome)+'<span class="st">'+esc(bl.status)+'</span></h2>';
+        if(bl.campos.length){ h+='<dl>'+bl.campos.map(function(c){return '<dt>'+esc(c[0])+'</dt><dd>'+esc(c[1])+'</dd>';}).join('')+'</dl>'; }
+        bl.extras.forEach(function(x){h+='<p class="extra">'+linkify(x)+'</p>';});
+        if(bl.cams.length){ h+='<div class="cams">'+bl.cams.map(function(c){return '<a class="cam" href="'+esc(c.url)+'" target="_blank" rel="noopener">📷 '+esc(c.nome)+'</a>';}).join('')+'</div>'; }
+        else if(bl.semcam){ h+='<p class="semcam">'+esc(bl.semcam)+'</p>'; }
+        h+='</article>';
+      });
+      h+='</section>';
+    }
+    p.rodape.forEach(function(s){
+      h+='<section class="secao">'+(s.t?'<h3>'+esc(s.t.split(':')[0])+'</h3>':'');
+      var resto=s.t&&s.t.indexOf(':')>0?s.t.slice(s.t.indexOf(':')+1).trim():'';
+      if(resto) h+='<p>'+linkify(resto)+'</p>';
+      s.p.forEach(function(x){h+='<p>'+linkify(x)+'</p>';});
+      h+='</section>';
+    });
+    return h;
+  }
+
+  function renderAtual(a, dataBoletim){
+    var hoje=ymd(agraoRioSafe()), hora=agraoRioSafe().getHours();
+    if(!a || a.data_alvo!==dataBoletim){
+      // ainda não rodou para este pedal
+      if(dataBoletim && (dataBoletim>hoje || (dataBoletim===hoje && hora<4))){
+        return '<section class="atual pendente"><p class="rot">Atualização automática</p><h2 style="color:var(--apagado)">🔄 Às 3h15 da madrugada</h2><p>Os modelos são relidos e os pluviômetros do Alerta Rio são conferidos ~1h antes da largada. Se algo mudar, aparece aqui, em cima do boletim.</p></section>';
+      }
+      return '';
+    }
+    var h='<section class="atual '+esc(a.status)+'"><p class="rot">Atualização das '+esc(a.hora_local||'3h')+' · '+esc(ddmm(a.data_alvo))+'</p>';
+    h+='<h2>'+esc(a.titulo||'')+'</h2><p>'+esc(a.resumo||'')+'</p>';
+    if(a.avisos&&a.avisos.length){ h+='<div class="avisos">'+a.avisos.map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'</div>'; }
+    if(a.pontos){
+      h+='<div class="pontos">';
+      Object.keys(a.pontos).forEach(function(k){
+        var pt=a.pontos[k], ag=pt.agora||{}; if(!ag.ok) return;
+        var md=pt.medido_alerta_rio, mmed=(md&&md.mm_3h!=null)?' · '+md.mm_3h.toFixed(1)+'mm medidos':'';
+        h+='<div class="pt"><b>'+esc(pt.nome)+'</b><span>'+(ag.chuva_prob_max_pct!=null?Math.round(ag.chuva_prob_max_pct)+'%':'—')+' · '+(ag.chuva_mm_total!=null?ag.chuva_mm_total.toFixed(1)+'mm':'—')+'</span>'+(mmed?'<span style="display:block;color:var(--apagado)">'+esc(mmed.slice(3))+'</span>':'')+'</div>';
+      });
+      h+='</div>';
+    }
+    var f=a.fontes||{};
+    h+='<p class="meta">Fontes: Open-Meteo'+(f.alerta_rio?' + Alerta Rio (chuva medida)':' · Alerta Rio indisponível')+'. Automático, sem revisão humana — na dúvida, olhe o céu e a câmera.</p></section>';
+    return h;
+  }
+  function agraoRioSafe(){try{return agoraRio();}catch(e){return new Date();}}
+
+  function rotuloData(dataAlvo){
+    var hoje=ymd(agraoRioSafe()), d=new Date(agraoRioSafe().getTime()+86400000), amanha=ymd(d);
+    if(dataAlvo===hoje) return 'Pedal de <b>hoje</b>';
+    if(dataAlvo===amanha) return 'Pedal de <b>amanhã</b>';
+    return 'Boletim de <b>'+ddmm(dataAlvo)+'</b> — pode estar desatualizado';
+  }
+
+  function carregar(){
+    var t=Date.now();
+    Promise.all([
+      fetch(BASE+'boletim.json?t='+t).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
+      fetch(BASE+'atualizacao.json?t='+t).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    ]).then(function(res){
+      var b=res[0], a=res[1], app=document.getElementById('app');
+      if(!b||!b.texto){ app.innerHTML='<div class="vazio">Ainda não tem boletim publicado. O primeiro sai hoje ~21h.</div>'; return; }
+      texto=b.texto; textoSemanal=b.texto_semanal||null;
+      var p; try{ p=parse(b.texto); }catch(e){ p=null; }
+      document.getElementById('h1data').textContent=(b.dia_semana?b.dia_semana+' ':'')+ddmm(b.data_alvo);
+      document.getElementById('sub').innerHTML=rotuloData(b.data_alvo)+', janela 4h–8h. Publicado às '+hhmm(b.gerado_em)+'.';
+      var h=renderAtual(a,b.data_alvo);
+      h+= (p&&p.blocos.length) ? renderBoletim(b,p) : '<pre class="bruto">'+linkify(b.texto)+'</pre>';
+      if(textoSemanal){ h+='<details class="semanal"><summary>📅 A semana</summary><pre>'+linkify(textoSemanal)+'</pre></details>'; }
+      app.innerHTML=h;
+      document.getElementById('rodapeGerado').textContent='Boletim gerado em '+ddmm(b.gerado_em)+' às '+hhmm(b.gerado_em)+(b.confianca?' · confiança dos modelos: '+b.confianca:'')+'.';
+    });
+  }
+
+  document.getElementById('btnCopy').addEventListener('click',function(){
+    var t=texto+(textoSemanal?'\n\n═══════\n\n'+textoSemanal:'');
+    if(!t){toast('Nada pra copiar ainda');return;}
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast('Boletim copiado');},function(){
+      var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Boletim copiado');}catch(e){toast('Não deu pra copiar');}document.body.removeChild(ta);});
+  });
+  document.getElementById('btnShare').addEventListener('click',function(){
+    var url='https://brunocortes-create.github.io/pedalera-alerta/';
+    var titulo=document.getElementById('h1data').textContent;
+    if(navigator.share){ navigator.share({title:'Pedal Rio — '+titulo,text:'Boletim do pedal de madrugada no Rio',url:url}).catch(function(){}); }
+    else { (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){toast('Link copiado');},function(){toast(url);}); }
+  });
+
+  carregar();
+  setInterval(carregar,5*60000); // se ficar aberta às 3h, pega a atualização sozinha
+})();
+</script>
+</body>
+</html>
