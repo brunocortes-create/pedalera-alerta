@@ -1,0 +1,110 @@
+{
+  "gerado_em": "2026-09-13T21:19:39.224812-03:00",
+  "hora_local": "21:19",
+  "data_alvo": "2026-09-13",
+  "status": "confirmado",
+  "titulo": "✅ CONFIRMADO",
+  "resumo": "Leitura das 21:19: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "avisos": [
+    "boletim da vespera e de 2026-09-14, nao de hoje (2026-09-13) — comparacao desativada"
+  ],
+  "pontos": {
+    "barra_recreio": {
+      "nome": "Barra/Recreio",
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
+      "agora": {
+        "chuva_prob_max_pct": 96,
+        "chuva_prob_largada_pct": 96,
+        "chuva_mm_total": 1.6,
+        "chuva_mm_madrugada_antes": 1.2,
+        "vento_med_kmh": 8.8,
+        "rajada_max_kmh": 20.2,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 20,
+        "temp_max_janela_c": 21,
+        "sensacao_largada_c": 23,
+        "confianca": "baixa",
+        "ok": true
+      },
+      "vespera": null,
+      "medido_alerta_rio": {
+        "estacao": "Barra/Barrinha",
+        "mm_1h": 0.2,
+        "mm_3h": 2.6,
+        "mm_24h": 8.8,
+        "lido_em": "2026-09-13T21:10:00-03:00"
+      }
+    },
+    "zona_sul": {
+      "nome": "Zona Sul",
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
+      "agora": {
+        "chuva_prob_max_pct": 91,
+        "chuva_prob_largada_pct": 86,
+        "chuva_mm_total": 1.4,
+        "chuva_mm_madrugada_antes": 0.9,
+        "vento_med_kmh": 8.2,
+        "rajada_max_kmh": 22.3,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 20,
+        "temp_max_janela_c": 21,
+        "sensacao_largada_c": 23,
+        "confianca": "baixa",
+        "ok": true
+      },
+      "vespera": null,
+      "medido_alerta_rio": {
+        "estacao": "Vidigal",
+        "mm_1h": 0.4,
+        "mm_3h": 3.6,
+        "mm_24h": 10.0,
+        "lido_em": "2026-09-13T21:10:00-03:00"
+      }
+    },
+    "grumari": {
+      "nome": "Grumari",
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
+      "agora": {
+        "chuva_prob_max_pct": 96,
+        "chuva_prob_largada_pct": 96,
+        "chuva_mm_total": 1.6,
+        "chuva_mm_madrugada_antes": 1.2,
+        "vento_med_kmh": 8.8,
+        "rajada_max_kmh": 20.2,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 20,
+        "temp_max_janela_c": 21,
+        "sensacao_largada_c": 22,
+        "confianca": "baixa",
+        "ok": true
+      },
+      "vespera": null,
+      "medido_alerta_rio": {
+        "estacao": "Guaratiba",
+        "mm_1h": 0.0,
+        "mm_3h": 0.4,
+        "mm_24h": 4.6,
+        "lido_em": "2026-09-13T21:10:00-03:00"
+      }
+    }
+  },
+  "fontes": {
+    "open_meteo": true,
+    "alerta_rio": true,
+    "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
+  },
+  "vespera": {
+    "gerado_em": "2026-09-13T21:17:41.776237-03:00",
+    "data_alvo": "2026-09-14",
+    "confianca_geral": "alta"
+  }
+}
