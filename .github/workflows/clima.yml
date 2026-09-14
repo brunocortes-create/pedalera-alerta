@@ -1,34 +1,76 @@
 name: Coletar Clima Pedal Rio
 
+# Dois momentos por dia, um workflow só:
+#   • ~20h30 BRT → modo "clima":      buscar_clima.py → config/clima-amanha.json (a Routine lê às 21h)
+#   • ~03h15 BRT → modo "madrugada":  atualizar_madrugada.py → docs/atualizacao.json (a página mostra)
+# Gatilho PRINCIPAL é o cron-job.org (chama workflow_dispatch nesses dois horários).
+# Os crons abaixo são só BACKUP — o cron nativo do GitHub atrasa ~1h de forma consistente.
+
 on:
   schedule:
-    - cron: '17 20 * * *'   # ~17:17 BRT — tentativa principal
-    - cron: '17 22 * * *'   # ~19:17 BRT — retry de segurança
+    - cron: '45 22 * * *'   # 19h45 BRT (+~1h de atraso ≈ 20h45) — backup do coletor
+    - cron: '45 5 * * *'    # 02h45 BRT (+~1h de atraso ≈ 03h45) — backup da madrugada
   workflow_dispatch:
+    inputs:
+      modo:
+        description: 'auto = decide pela hora BRT (0h–6h → madrugada; resto → clima)'
+        type: choice
+        options: [auto, clima, madrugada]
+        default: auto
 
 permissions:
-  contents: write   # required for the workflow to commit the file to the repo
+  contents: write
+
+# Nunca dois pushes ao mesmo tempo (cron-job.org + backup podem coincidir)
+concurrency:
+  group: pedal-rio-commits
+  cancel-in-progress: false
 
 jobs:
-  buscar-clima:
+  rodar:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Fetch weather from Open-Meteo
+      - name: Decidir modo
+        id: modo
+        run: |
+          MODO="${{ github.event.inputs.modo || 'auto' }}"
+          H=$(TZ=America/Sao_Paulo date +%-H)
+          if [ "$MODO" = "auto" ]; then
+            if [ "$H" -lt 7 ]; then MODO=madrugada; else MODO=clima; fi
+          fi
+          echo "modo=$MODO" >> "$GITHUB_OUTPUT"
+          echo "Modo: $MODO — agora são $(TZ=America/Sao_Paulo date '+%H:%M') BRT"
+
+      - name: Coletar clima de amanhã (Open-Meteo, 5 modelos)
+        if: steps.modo.outputs.modo == 'clima'
         run: python buscar_clima.py
 
-      - name: Commit and push result
+      - name: Atualização da madrugada (Open-Meteo agora + Alerta Rio)
+        if: steps.modo.outputs.modo == 'madrugada'
+        run: python atualizar_madrugada.py
+
+      - name: Commit e push
         run: |
           git config user.name "Pedal Rio Bot"
           git config user.email "bot@pedalrio.local"
-          git add config/clima-amanha.json
-          git diff --staged --quiet || git commit -m "Clima atualizado [automático]"
+          for f in config/clima-amanha.json docs/atualizacao.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --staged --quiet; then
+            echo "Nada mudou."; exit 0
+          fi
+          if [ "${{ steps.modo.outputs.modo }}" = "madrugada" ]; then
+            git commit -m "Atualização da madrugada [automático]"
+          else
+            git commit -m "Clima atualizado [automático]"
+          fi
+          git pull --rebase origin main
           git push
