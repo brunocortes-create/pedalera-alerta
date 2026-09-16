@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-15T20:30:19.069422-03:00",
+  "gerado_em": "2026-09-15T21:48:53.504641-03:00",
   "data_alvo": "2026-09-16",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -28,7 +28,7 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 4,
-        "chuva_mm_max_modelos": 1.5,
+        "chuva_mm_max_modelos": 1.1,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.5,
@@ -43,9 +43,9 @@
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 1.5,
-            "mm_largada": 1.5,
-            "prob_max_pct": 90,
+            "mm_janela": 0.9,
+            "mm_largada": 0.9,
+            "prob_max_pct": 92,
             "chove": true
           },
           "icon_seamless": {
@@ -103,9 +103,9 @@
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 1.1,
-            "mm_largada": 1.0,
-            "prob_max_pct": 81,
+            "mm_janela": 0.7,
+            "mm_largada": 0.6,
+            "prob_max_pct": 84,
             "chove": true
           },
           "icon_seamless": {
@@ -148,7 +148,7 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 4,
-        "chuva_mm_max_modelos": 1.5,
+        "chuva_mm_max_modelos": 1.1,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.5,
@@ -163,9 +163,9 @@
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 1.5,
-            "mm_largada": 1.5,
-            "prob_max_pct": 90,
+            "mm_janela": 0.9,
+            "mm_largada": 0.9,
+            "prob_max_pct": 92,
             "chove": true
           },
           "icon_seamless": {
