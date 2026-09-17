@@ -1,114 +1,106 @@
 {
-  "gerado_em": "2026-09-16T03:15:12.134579-03:00",
+  "gerado_em": "2026-09-17T03:15:12.252453-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-09-16",
+  "data_alvo": "2026-09-17",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
-  "avisos": [
-    "💧 Pista pode estar molhada em: Barra/Recreio, Zona Sul, Grumari."
-  ],
+  "avisos": [],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
       "status": "confirmado",
-      "motivos": [
-        "modelo indica 1.7 mm entre 0h e 3h — pista pode estar molhada"
-      ],
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 95,
-        "chuva_prob_largada_pct": 95,
-        "chuva_mm_total": 0.5,
-        "chuva_mm_madrugada_antes": 1.7,
-        "vento_med_kmh": 14.5,
-        "rajada_max_kmh": 33.5,
-        "vento_dir_cardeal": "SO",
-        "temp_min_c": 19,
+        "chuva_prob_max_pct": 4,
+        "chuva_prob_largada_pct": 4,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 8.3,
+        "rajada_max_kmh": 18.7,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 20,
         "temp_max_janela_c": 20,
-        "sensacao_largada_c": 19,
-        "confianca": "media",
+        "sensacao_largada_c": 20,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 99,
-        "chuva_mm_total": 0.5,
-        "rajada_max_kmh": 32.4,
-        "confianca": "media"
+        "chuva_prob_max_pct": 0,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 18.7,
+        "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Recreio dos Bandeirantes",
         "mm_1h": 0.0,
-        "mm_3h": 0.2,
-        "mm_24h": 1.4,
-        "lido_em": "2026-09-16T03:05:00-03:00"
+        "mm_3h": 0.0,
+        "mm_24h": 0.2,
+        "lido_em": "2026-09-17T03:10:00-03:00"
       }
     },
     "zona_sul": {
       "nome": "Zona Sul",
       "status": "confirmado",
-      "motivos": [
-        "modelo indica 3.8 mm entre 0h e 3h — pista pode estar molhada"
-      ],
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 67,
-        "chuva_prob_largada_pct": 66,
-        "chuva_mm_total": 0.4,
-        "chuva_mm_madrugada_antes": 3.8,
-        "vento_med_kmh": 11.6,
-        "rajada_max_kmh": 30.2,
-        "vento_dir_cardeal": "SO",
+        "chuva_prob_max_pct": 27,
+        "chuva_prob_largada_pct": 27,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 5.9,
+        "rajada_max_kmh": 16.9,
+        "vento_dir_cardeal": "NE",
         "temp_min_c": 19,
         "temp_max_janela_c": 20,
         "sensacao_largada_c": 20,
-        "confianca": "baixa",
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 89,
-        "chuva_mm_total": 1.4,
-        "rajada_max_kmh": 29.2,
-        "confianca": "media"
+        "chuva_prob_max_pct": 9,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 16.9,
+        "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Copacabana",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 0.2,
-        "lido_em": "2026-09-16T03:00:00-03:00"
+        "mm_24h": 0.0,
+        "lido_em": "2026-09-17T03:05:00-03:00"
       }
     },
     "grumari": {
       "nome": "Grumari",
       "status": "confirmado",
-      "motivos": [
-        "modelo indica 1.7 mm entre 0h e 3h — pista pode estar molhada"
-      ],
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 95,
-        "chuva_prob_largada_pct": 95,
-        "chuva_mm_total": 0.5,
-        "chuva_mm_madrugada_antes": 1.7,
-        "vento_med_kmh": 14.5,
-        "rajada_max_kmh": 33.5,
-        "vento_dir_cardeal": "SO",
-        "temp_min_c": 19,
+        "chuva_prob_max_pct": 4,
+        "chuva_prob_largada_pct": 4,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 8.3,
+        "rajada_max_kmh": 18.7,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 20,
         "temp_max_janela_c": 20,
-        "sensacao_largada_c": 19,
-        "confianca": "media",
+        "sensacao_largada_c": 20,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 99,
-        "chuva_mm_total": 0.5,
-        "rajada_max_kmh": 32.4,
-        "confianca": "media"
+        "chuva_prob_max_pct": 0,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 18.7,
+        "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Grota Funda",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 0.6,
-        "lido_em": "2026-09-16T03:05:00-03:00"
+        "mm_24h": 0.2,
+        "lido_em": "2026-09-17T03:10:00-03:00"
       }
     }
   },
@@ -118,8 +110,8 @@
     "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
   },
   "vespera": {
-    "gerado_em": "2026-09-15T21:48:53.504641-03:00",
-    "data_alvo": "2026-09-16",
-    "confianca_geral": "media"
+    "gerado_em": "2026-09-16T21:53:25.341953-03:00",
+    "data_alvo": "2026-09-17",
+    "confianca_geral": "alta"
   }
 }
