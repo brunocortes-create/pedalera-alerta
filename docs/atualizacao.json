@@ -1,27 +1,31 @@
 {
-  "gerado_em": "2026-09-19T03:15:10.719753-03:00",
-  "hora_local": "03:15",
+  "gerado_em": "2026-09-19T06:43:58.828568-03:00",
+  "hora_local": "06:43",
   "data_alvo": "2026-09-19",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
-  "avisos": [],
+  "resumo": "Leitura das 06:43: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "avisos": [
+    "💧 Pista pode estar molhada em: Barra/Recreio, Grumari."
+  ],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
       "status": "confirmado",
-      "motivos": [],
+      "motivos": [
+        "modelo indica 0.5 mm entre 0h e 3h — pista pode estar molhada"
+      ],
       "agora": {
         "chuva_prob_max_pct": 3,
         "chuva_prob_largada_pct": 3,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.1,
-        "vento_med_kmh": 9.0,
-        "rajada_max_kmh": 21.6,
-        "vento_dir_cardeal": "NE",
+        "chuva_mm_madrugada_antes": 0.5,
+        "vento_med_kmh": 8.8,
+        "rajada_max_kmh": 20.5,
+        "vento_dir_cardeal": "L",
         "temp_min_c": 19,
         "temp_max_janela_c": 21,
-        "sensacao_largada_c": 21,
+        "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
       },
@@ -36,7 +40,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T03:05:00-03:00"
+        "lido_em": "2026-09-19T06:40:00-03:00"
       }
     },
     "zona_sul": {
@@ -47,11 +51,11 @@
         "chuva_prob_max_pct": 0,
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 9.8,
-        "rajada_max_kmh": 25.9,
+        "chuva_mm_madrugada_antes": 0.2,
+        "vento_med_kmh": 8.2,
+        "rajada_max_kmh": 23.8,
         "vento_dir_cardeal": "NE",
-        "temp_min_c": 19,
+        "temp_min_c": 18,
         "temp_max_janela_c": 21,
         "sensacao_largada_c": 20,
         "confianca": "alta",
@@ -68,22 +72,24 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T03:05:00-03:00"
+        "lido_em": "2026-09-19T06:35:00-03:00"
       }
     },
     "grumari": {
       "nome": "Grumari",
       "status": "confirmado",
-      "motivos": [],
+      "motivos": [
+        "modelo indica 0.5 mm entre 0h e 3h — pista pode estar molhada"
+      ],
       "agora": {
         "chuva_prob_max_pct": 3,
         "chuva_prob_largada_pct": 3,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.1,
-        "vento_med_kmh": 9.0,
-        "rajada_max_kmh": 21.6,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 19,
+        "chuva_mm_madrugada_antes": 0.5,
+        "vento_med_kmh": 8.8,
+        "rajada_max_kmh": 20.5,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 18,
         "temp_max_janela_c": 21,
         "sensacao_largada_c": 20,
         "confianca": "alta",
@@ -100,7 +106,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T03:05:00-03:00"
+        "lido_em": "2026-09-19T06:35:00-03:00"
       }
     }
   },
