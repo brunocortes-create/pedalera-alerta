@@ -1,38 +1,34 @@
 {
-  "gerado_em": "2026-09-19T06:43:58.828568-03:00",
-  "hora_local": "06:43",
-  "data_alvo": "2026-09-19",
+  "gerado_em": "2026-09-20T03:15:10.827452-03:00",
+  "hora_local": "03:15",
+  "data_alvo": "2026-09-20",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 06:43: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
-  "avisos": [
-    "💧 Pista pode estar molhada em: Barra/Recreio, Grumari."
-  ],
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "avisos": [],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
       "status": "confirmado",
-      "motivos": [
-        "modelo indica 0.5 mm entre 0h e 3h — pista pode estar molhada"
-      ],
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.5,
-        "vento_med_kmh": 8.8,
-        "rajada_max_kmh": 20.5,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 19,
-        "temp_max_janela_c": 21,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 7.3,
+        "rajada_max_kmh": 18.0,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 18,
+        "temp_max_janela_c": 22,
         "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 12,
+        "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 25.2,
+        "rajada_max_kmh": 18.0,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -40,7 +36,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T06:40:00-03:00"
+        "lido_em": "2026-09-20T03:10:00-03:00"
       }
     },
     "zona_sul": {
@@ -51,12 +47,12 @@
         "chuva_prob_max_pct": 0,
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.2,
-        "vento_med_kmh": 8.2,
-        "rajada_max_kmh": 23.8,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 6.5,
+        "rajada_max_kmh": 21.2,
         "vento_dir_cardeal": "NE",
-        "temp_min_c": 18,
-        "temp_max_janela_c": 21,
+        "temp_min_c": 19,
+        "temp_max_janela_c": 22,
         "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
@@ -64,7 +60,7 @@
       "vespera": {
         "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 27.4,
+        "rajada_max_kmh": 21.2,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -72,33 +68,31 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T06:35:00-03:00"
+        "lido_em": "2026-09-20T03:10:00-03:00"
       }
     },
     "grumari": {
       "nome": "Grumari",
       "status": "confirmado",
-      "motivos": [
-        "modelo indica 0.5 mm entre 0h e 3h — pista pode estar molhada"
-      ],
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.5,
-        "vento_med_kmh": 8.8,
-        "rajada_max_kmh": 20.5,
-        "vento_dir_cardeal": "L",
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 7.3,
+        "rajada_max_kmh": 18.0,
+        "vento_dir_cardeal": "NE",
         "temp_min_c": 18,
-        "temp_max_janela_c": 21,
+        "temp_max_janela_c": 22,
         "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 12,
+        "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 25.2,
+        "rajada_max_kmh": 18.0,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -106,7 +100,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-09-19T06:35:00-03:00"
+        "lido_em": "2026-09-20T03:10:00-03:00"
       }
     }
   },
@@ -116,8 +110,8 @@
     "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
   },
   "vespera": {
-    "gerado_em": "2026-09-18T21:38:20.973318-03:00",
-    "data_alvo": "2026-09-19",
+    "gerado_em": "2026-09-19T21:24:14.451603-03:00",
+    "data_alvo": "2026-09-20",
     "confianca_geral": "alta"
   }
 }
