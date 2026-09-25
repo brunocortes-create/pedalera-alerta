@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-09-25T07:35:11.200045-03:00",
+  "gerado_em": "2026-09-25T20:30:18.330709-03:00",
   "data_alvo": "2026-09-26",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -7,21 +7,21 @@
     "barra_recreio": {
       "nome": "Barra/Recreio",
       "temp_min_c": 20,
-      "temp_max_janela_c": 23,
-      "temp_med_c": 21,
-      "sensacao_min_c": 22,
+      "temp_max_janela_c": 25,
+      "temp_med_c": 22,
+      "sensacao_min_c": 23,
       "sensacao_largada_c": 23,
-      "sensacao_final_c": 27,
-      "umidade_max_pct": 99,
-      "visibilidade_min_m": 360.0,
+      "sensacao_final_c": 28,
+      "umidade_max_pct": 93,
+      "visibilidade_min_m": 740.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 0,
       "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 6.2,
-      "rajada_max_kmh": 18.0,
-      "vento_dir_graus": 4,
+      "vento_med_kmh": 4.8,
+      "rajada_max_kmh": 15.8,
+      "vento_dir_graus": 5,
       "vento_dir_cardeal": "N",
       "nascer_do_sol": "05:39",
       "ok": true,
@@ -57,7 +57,7 @@
           "gem_seamless": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 4,
+            "prob_max_pct": 0,
             "chove": false
           }
         }
@@ -72,16 +72,16 @@
       "sensacao_min_c": 23,
       "sensacao_largada_c": 23,
       "sensacao_final_c": 27,
-      "umidade_max_pct": 99,
-      "visibilidade_min_m": 200.0,
+      "umidade_max_pct": 98,
+      "visibilidade_min_m": 320.0,
       "risco_neblina": "alto",
-      "chuva_prob_max_pct": 2,
-      "chuva_prob_largada_pct": 2,
+      "chuva_prob_max_pct": 0,
+      "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 4.7,
-      "rajada_max_kmh": 16.9,
-      "vento_dir_graus": 8,
+      "vento_med_kmh": 5.1,
+      "rajada_max_kmh": 15.1,
+      "vento_dir_graus": 4,
       "vento_dir_cardeal": "N",
       "nascer_do_sol": "05:38",
       "ok": true,
@@ -93,13 +93,13 @@
           "best_match": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 2,
+            "prob_max_pct": 0,
             "chove": false
           },
           "ecmwf_ifs025": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 2,
+            "prob_max_pct": 0,
             "chove": false
           },
           "gfs_seamless": {
@@ -117,7 +117,7 @@
           "gem_seamless": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 4,
+            "prob_max_pct": 0,
             "chove": false
           }
         }
@@ -127,21 +127,21 @@
     "grumari": {
       "nome": "Grumari",
       "temp_min_c": 20,
-      "temp_max_janela_c": 23,
-      "temp_med_c": 21,
-      "sensacao_min_c": 22,
-      "sensacao_largada_c": 22,
-      "sensacao_final_c": 27,
-      "umidade_max_pct": 99,
-      "visibilidade_min_m": 360.0,
+      "temp_max_janela_c": 24,
+      "temp_med_c": 22,
+      "sensacao_min_c": 23,
+      "sensacao_largada_c": 23,
+      "sensacao_final_c": 28,
+      "umidade_max_pct": 93,
+      "visibilidade_min_m": 740.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 0,
       "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 6.2,
-      "rajada_max_kmh": 18.0,
-      "vento_dir_graus": 4,
+      "vento_med_kmh": 4.8,
+      "rajada_max_kmh": 15.8,
+      "vento_dir_graus": 5,
       "vento_dir_cardeal": "N",
       "nascer_do_sol": "05:39",
       "ok": true,
@@ -177,7 +177,7 @@
           "gem_seamless": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 4,
+            "prob_max_pct": 0,
             "chove": false
           }
         }
