@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-09-24T03:15:13.156161-03:00",
+  "gerado_em": "2026-09-25T03:15:11.758053-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-09-24",
+  "data_alvo": "2026-09-25",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -16,27 +16,27 @@
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.5,
-        "rajada_max_kmh": 14.8,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 17,
-        "temp_max_janela_c": 19,
-        "sensacao_largada_c": 18,
+        "vento_med_kmh": 3.4,
+        "rajada_max_kmh": 10.4,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 18,
+        "temp_max_janela_c": 22,
+        "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 10,
+        "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 14.8,
+        "rajada_max_kmh": 10.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Recreio dos Bandeirantes",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 32.8,
-        "lido_em": "2026-09-24T03:05:00-03:00"
+        "mm_24h": 0.0,
+        "lido_em": "2026-09-25T03:10:00-03:00"
       }
     },
     "zona_sul": {
@@ -44,31 +44,31 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 4,
-        "chuva_prob_largada_pct": 4,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.2,
-        "rajada_max_kmh": 16.2,
+        "vento_med_kmh": 4.2,
+        "rajada_max_kmh": 13.3,
         "vento_dir_cardeal": "NE",
         "temp_min_c": 18,
-        "temp_max_janela_c": 20,
+        "temp_max_janela_c": 21,
         "sensacao_largada_c": 20,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 9,
+        "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 16.2,
-        "confianca": "alta"
+        "rajada_max_kmh": 13.3,
+        "confianca": "media"
       },
       "medido_alerta_rio": {
         "estacao": "Copacabana",
         "mm_1h": 0.0,
-        "mm_3h": 0.2,
-        "mm_24h": 30.2,
-        "lido_em": "2026-09-24T03:05:00-03:00"
+        "mm_3h": 0.0,
+        "mm_24h": 0.2,
+        "lido_em": "2026-09-25T03:10:00-03:00"
       }
     },
     "grumari": {
@@ -80,27 +80,27 @@
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.5,
-        "rajada_max_kmh": 14.8,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 17,
-        "temp_max_janela_c": 19,
-        "sensacao_largada_c": 18,
+        "vento_med_kmh": 3.4,
+        "rajada_max_kmh": 10.4,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 18,
+        "temp_max_janela_c": 22,
+        "sensacao_largada_c": 19,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 10,
+        "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 14.8,
+        "rajada_max_kmh": 10.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Grota Funda",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 77.8000000000001,
-        "lido_em": "2026-09-24T03:05:00-03:00"
+        "mm_24h": 0.0,
+        "lido_em": "2026-09-25T03:10:00-03:00"
       }
     }
   },
@@ -110,8 +110,8 @@
     "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
   },
   "vespera": {
-    "gerado_em": "2026-09-23T21:53:29.791854-03:00",
-    "data_alvo": "2026-09-24",
-    "confianca_geral": "alta"
+    "gerado_em": "2026-09-24T21:50:41.085875-03:00",
+    "data_alvo": "2026-09-25",
+    "confianca_geral": "media"
   }
 }
