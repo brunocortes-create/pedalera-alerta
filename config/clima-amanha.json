@@ -1,45 +1,45 @@
 {
-  "gerado_em": "2026-09-26T07:18:05.108640-03:00",
+  "gerado_em": "2026-09-26T20:30:19.994836-03:00",
   "data_alvo": "2026-09-27",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "temp_min_c": 20,
+      "temp_min_c": 21,
       "temp_max_janela_c": 22,
       "temp_med_c": 21,
-      "sensacao_min_c": 24,
-      "sensacao_largada_c": 24,
+      "sensacao_min_c": 25,
+      "sensacao_largada_c": 25,
       "sensacao_final_c": 26,
       "umidade_max_pct": 100,
       "visibilidade_min_m": 180.0,
       "risco_neblina": "alto",
-      "chuva_prob_max_pct": 0,
+      "chuva_prob_max_pct": 1,
       "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 5.4,
-      "rajada_max_kmh": 16.2,
-      "vento_dir_graus": 329,
+      "vento_med_kmh": 4.6,
+      "rajada_max_kmh": 14.4,
+      "vento_dir_graus": 304,
       "vento_dir_cardeal": "NO",
       "nascer_do_sol": "05:38",
       "ok": true,
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 0,
-        "chuva_mm_max_modelos": 0.0,
+        "chuva_mm_max_modelos": 0.1,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "prob_max_pct": 1,
             "chove": false
           },
           "ecmwf_ifs025": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "prob_max_pct": 1,
             "chove": false
           },
           "gfs_seamless": {
@@ -55,9 +55,9 @@
             "chove": false
           },
           "gem_seamless": {
-            "mm_janela": 0.0,
-            "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "mm_janela": 0.1,
+            "mm_largada": 0.1,
+            "prob_max_pct": 6,
             "chove": false
           }
         }
@@ -66,23 +66,23 @@
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "temp_min_c": 20,
+      "temp_min_c": 21,
       "temp_max_janela_c": 22,
       "temp_med_c": 21,
       "sensacao_min_c": 24,
       "sensacao_largada_c": 24,
       "sensacao_final_c": 26,
-      "umidade_max_pct": 99,
-      "visibilidade_min_m": 380.0,
+      "umidade_max_pct": 98,
+      "visibilidade_min_m": 400.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 0,
       "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 3.2,
-      "rajada_max_kmh": 12.2,
-      "vento_dir_graus": 320,
-      "vento_dir_cardeal": "NO",
+      "vento_med_kmh": 4.2,
+      "rajada_max_kmh": 13.7,
+      "vento_dir_graus": 245,
+      "vento_dir_cardeal": "SO",
       "nascer_do_sol": "05:37",
       "ok": true,
       "modelos": {
@@ -126,40 +126,40 @@
     },
     "grumari": {
       "nome": "Grumari",
-      "temp_min_c": 20,
+      "temp_min_c": 21,
       "temp_max_janela_c": 22,
       "temp_med_c": 21,
-      "sensacao_min_c": 23,
+      "sensacao_min_c": 24,
       "sensacao_largada_c": 24,
       "sensacao_final_c": 26,
       "umidade_max_pct": 100,
       "visibilidade_min_m": 180.0,
       "risco_neblina": "alto",
-      "chuva_prob_max_pct": 0,
+      "chuva_prob_max_pct": 1,
       "chuva_prob_largada_pct": 0,
       "chuva_mm_total": 0.0,
       "chuva_mm_madrugada_antes": 0.0,
-      "vento_med_kmh": 5.4,
-      "rajada_max_kmh": 16.2,
-      "vento_dir_graus": 329,
+      "vento_med_kmh": 4.6,
+      "rajada_max_kmh": 14.4,
+      "vento_dir_graus": 304,
       "vento_dir_cardeal": "NO",
       "nascer_do_sol": "05:38",
       "ok": true,
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 0,
-        "chuva_mm_max_modelos": 0.0,
+        "chuva_mm_max_modelos": 0.1,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "prob_max_pct": 1,
             "chove": false
           },
           "ecmwf_ifs025": {
             "mm_janela": 0.0,
             "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "prob_max_pct": 1,
             "chove": false
           },
           "gfs_seamless": {
@@ -175,9 +175,9 @@
             "chove": false
           },
           "gem_seamless": {
-            "mm_janela": 0.0,
-            "mm_largada": 0.0,
-            "prob_max_pct": 0,
+            "mm_janela": 0.1,
+            "mm_largada": 0.1,
+            "prob_max_pct": 6,
             "chove": false
           }
         }
