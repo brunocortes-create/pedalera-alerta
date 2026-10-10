@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-09T03:15:12.354010-03:00",
+  "gerado_em": "2026-10-10T03:15:11.852281-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-10-09",
+  "data_alvo": "2026-10-10",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -16,19 +16,19 @@
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 6.7,
-        "rajada_max_kmh": 16.6,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 21,
+        "vento_med_kmh": 2.0,
+        "rajada_max_kmh": 14.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 22,
         "temp_max_janela_c": 25,
-        "sensacao_largada_c": 23,
+        "sensacao_largada_c": 26,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 16.6,
+        "rajada_max_kmh": 14.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -36,7 +36,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-09T03:10:00-03:00"
+        "lido_em": "2026-10-10T03:05:00-03:00"
       }
     },
     "zona_sul": {
@@ -48,19 +48,19 @@
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.5,
-        "rajada_max_kmh": 13.7,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 20,
-        "temp_max_janela_c": 23,
-        "sensacao_largada_c": 24,
+        "vento_med_kmh": 2.3,
+        "rajada_max_kmh": 14.8,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 22,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 26,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 13.7,
+        "rajada_max_kmh": 14.8,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -68,7 +68,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-09T03:10:00-03:00"
+        "lido_em": "2026-10-10T03:05:00-03:00"
       }
     },
     "grumari": {
@@ -80,27 +80,27 @@
         "chuva_prob_largada_pct": 0,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 6.7,
-        "rajada_max_kmh": 16.6,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 20,
+        "vento_med_kmh": 2.0,
+        "rajada_max_kmh": 14.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 22,
         "temp_max_janela_c": 25,
-        "sensacao_largada_c": 23,
+        "sensacao_largada_c": 26,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 16.6,
+        "rajada_max_kmh": 14.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Grota Funda",
-        "mm_1h": 0.0,
+        "mm_1h": -99.99,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-09T03:10:00-03:00"
+        "lido_em": "2026-10-10T03:05:00-03:00"
       }
     }
   },
@@ -110,8 +110,8 @@
     "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
   },
   "vespera": {
-    "gerado_em": "2026-10-08T23:34:09.694996-03:00",
-    "data_alvo": "2026-10-09",
+    "gerado_em": "2026-10-09T22:54:59.001177-03:00",
+    "data_alvo": "2026-10-10",
     "confianca_geral": "alta"
   }
 }
