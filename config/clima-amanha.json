@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-11T20:30:22.847082-03:00",
+  "gerado_em": "2026-10-11T22:47:38.243164-03:00",
   "data_alvo": "2026-10-12",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -7,22 +7,22 @@
     "barra_recreio": {
       "nome": "Barra/Recreio",
       "temp_min_c": 22,
-      "temp_max_janela_c": 24,
-      "temp_med_c": 23,
+      "temp_max_janela_c": 23,
+      "temp_med_c": 22,
       "sensacao_min_c": 26,
       "sensacao_largada_c": 26,
-      "sensacao_final_c": 29,
+      "sensacao_final_c": 27,
       "umidade_max_pct": 98,
-      "visibilidade_min_m": 1260.0,
+      "visibilidade_min_m": 460.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 29,
       "chuva_prob_largada_pct": 29,
-      "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.1,
-      "vento_med_kmh": 5.2,
-      "rajada_max_kmh": 14.0,
-      "vento_dir_graus": 47,
-      "vento_dir_cardeal": "NE",
+      "chuva_mm_total": 0.2,
+      "chuva_mm_madrugada_antes": 0.0,
+      "vento_med_kmh": 4.5,
+      "rajada_max_kmh": 11.5,
+      "vento_dir_graus": 340,
+      "vento_dir_cardeal": "N",
       "nascer_do_sol": "05:24",
       "ok": true,
       "modelos": {
@@ -31,7 +31,7 @@
         "chuva_mm_max_modelos": 0.8,
         "detalhe": {
           "best_match": {
-            "mm_janela": 0.0,
+            "mm_janela": 0.2,
             "mm_largada": 0.0,
             "prob_max_pct": 29,
             "chove": false
@@ -45,7 +45,7 @@
           "gfs_seamless": {
             "mm_janela": 0.8,
             "mm_largada": 0.8,
-            "prob_max_pct": 79,
+            "prob_max_pct": 88,
             "chove": true
           },
           "icon_seamless": {
@@ -67,21 +67,21 @@
     "zona_sul": {
       "nome": "Zona Sul",
       "temp_min_c": 22,
-      "temp_max_janela_c": 23,
+      "temp_max_janela_c": 24,
       "temp_med_c": 23,
-      "sensacao_min_c": 26,
-      "sensacao_largada_c": 26,
+      "sensacao_min_c": 27,
+      "sensacao_largada_c": 27,
       "sensacao_final_c": 28,
-      "umidade_max_pct": 99,
-      "visibilidade_min_m": 10820.0,
+      "umidade_max_pct": 98,
+      "visibilidade_min_m": 3680.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 35,
       "chuva_prob_largada_pct": 31,
       "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.2,
-      "vento_med_kmh": 4.4,
-      "rajada_max_kmh": 18.4,
-      "vento_dir_graus": 37,
+      "chuva_mm_madrugada_antes": 0.0,
+      "vento_med_kmh": 1.6,
+      "rajada_max_kmh": 11.5,
+      "vento_dir_graus": 45,
       "vento_dir_cardeal": "NE",
       "nascer_do_sol": "05:23",
       "ok": true,
@@ -105,7 +105,7 @@
           "gfs_seamless": {
             "mm_janela": 0.5,
             "mm_largada": 0.5,
-            "prob_max_pct": 88,
+            "prob_max_pct": 100,
             "chove": true
           },
           "icon_seamless": {
@@ -127,22 +127,22 @@
     "grumari": {
       "nome": "Grumari",
       "temp_min_c": 22,
-      "temp_max_janela_c": 24,
+      "temp_max_janela_c": 23,
       "temp_med_c": 22,
-      "sensacao_min_c": 25,
-      "sensacao_largada_c": 25,
-      "sensacao_final_c": 28,
+      "sensacao_min_c": 26,
+      "sensacao_largada_c": 26,
+      "sensacao_final_c": 27,
       "umidade_max_pct": 98,
-      "visibilidade_min_m": 1260.0,
+      "visibilidade_min_m": 460.0,
       "risco_neblina": "alto",
       "chuva_prob_max_pct": 29,
       "chuva_prob_largada_pct": 29,
-      "chuva_mm_total": 0.0,
-      "chuva_mm_madrugada_antes": 0.1,
-      "vento_med_kmh": 5.2,
-      "rajada_max_kmh": 14.0,
-      "vento_dir_graus": 47,
-      "vento_dir_cardeal": "NE",
+      "chuva_mm_total": 0.2,
+      "chuva_mm_madrugada_antes": 0.0,
+      "vento_med_kmh": 4.5,
+      "rajada_max_kmh": 11.5,
+      "vento_dir_graus": 340,
+      "vento_dir_cardeal": "N",
       "nascer_do_sol": "05:24",
       "ok": true,
       "modelos": {
@@ -151,7 +151,7 @@
         "chuva_mm_max_modelos": 0.8,
         "detalhe": {
           "best_match": {
-            "mm_janela": 0.0,
+            "mm_janela": 0.2,
             "mm_largada": 0.0,
             "prob_max_pct": 29,
             "chove": false
@@ -165,7 +165,7 @@
           "gfs_seamless": {
             "mm_janela": 0.8,
             "mm_largada": 0.8,
-            "prob_max_pct": 79,
+            "prob_max_pct": 88,
             "chove": true
           },
           "icon_seamless": {
