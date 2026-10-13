@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-10-13T00:10:55.202299-03:00",
-  "hora_local": "00:10",
+  "gerado_em": "2026-10-13T03:15:13.633516-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-10-13",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 00:10: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -36,7 +36,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-13T00:05:00-03:00"
+        "lido_em": "2026-10-13T03:10:00-03:00"
       }
     },
     "zona_sul": {
@@ -68,7 +68,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-13T00:05:00-03:00"
+        "lido_em": "2026-10-13T03:10:00-03:00"
       }
     },
     "grumari": {
@@ -100,7 +100,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.2,
-        "lido_em": "2026-10-13T00:05:00-03:00"
+        "lido_em": "2026-10-13T03:10:00-03:00"
       }
     }
   },
