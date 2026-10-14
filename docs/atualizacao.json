@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-13T03:15:13.633516-03:00",
+  "gerado_em": "2026-10-14T03:15:16.279394-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-10-13",
+  "data_alvo": "2026-10-14",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -12,23 +12,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 9,
+        "chuva_prob_largada_pct": 2,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.2,
-        "rajada_max_kmh": 14.4,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 25,
-        "sensacao_largada_c": 25,
+        "vento_med_kmh": 4.6,
+        "rajada_max_kmh": 13.7,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
+        "chuva_prob_max_pct": 6,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 11.2,
+        "rajada_max_kmh": 13.7,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -36,7 +36,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-13T03:10:00-03:00"
+        "lido_em": "2026-10-14T03:05:00-03:00"
       }
     },
     "zona_sul": {
@@ -44,23 +44,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 4,
+        "chuva_prob_largada_pct": 2,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.7,
-        "rajada_max_kmh": 19.1,
-        "vento_dir_cardeal": "N",
+        "vento_med_kmh": 3.0,
+        "rajada_max_kmh": 13.0,
+        "vento_dir_cardeal": "NE",
         "temp_min_c": 22,
-        "temp_max_janela_c": 24,
-        "sensacao_largada_c": 26,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
+        "chuva_prob_max_pct": 3,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 14.4,
+        "rajada_max_kmh": 13.0,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
@@ -68,7 +68,7 @@
         "mm_1h": 0.0,
         "mm_3h": 0.0,
         "mm_24h": 0.0,
-        "lido_em": "2026-10-13T03:10:00-03:00"
+        "lido_em": "2026-10-14T03:05:00-03:00"
       }
     },
     "grumari": {
@@ -76,31 +76,31 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 9,
+        "chuva_prob_largada_pct": 2,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.2,
-        "rajada_max_kmh": 14.4,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 25,
-        "sensacao_largada_c": 25,
+        "vento_med_kmh": 4.6,
+        "rajada_max_kmh": 13.7,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 22,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 26,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
+        "chuva_prob_max_pct": 6,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 11.2,
+        "rajada_max_kmh": 13.7,
         "confianca": "alta"
       },
       "medido_alerta_rio": {
         "estacao": "Grota Funda",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 0.2,
-        "lido_em": "2026-10-13T03:10:00-03:00"
+        "mm_24h": 0.0,
+        "lido_em": "2026-10-14T03:05:00-03:00"
       }
     }
   },
@@ -110,8 +110,8 @@
     "alerta_rio_url": "https://websempre.rio.rj.gov.br/json/chuvas"
   },
   "vespera": {
-    "gerado_em": "2026-10-12T20:30:21.393596-03:00",
-    "data_alvo": "2026-10-13",
+    "gerado_em": "2026-10-13T22:24:15.142862-03:00",
+    "data_alvo": "2026-10-14",
     "confianca_geral": "alta"
   }
 }
