@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-14T20:30:23.421565-03:00",
+  "gerado_em": "2026-10-14T21:53:18.709615-03:00",
   "data_alvo": "2026-10-15",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -43,9 +43,9 @@
             "chove": false
           },
           "gfs_seamless": {
-            "mm_janela": 7.6,
-            "mm_largada": 3.2,
-            "prob_max_pct": 87,
+            "mm_janela": 0.5,
+            "mm_largada": 0.0,
+            "prob_max_pct": 32,
             "chove": true
           },
           "icon_seamless": {
@@ -103,9 +103,9 @@
             "chove": false
           },
           "gfs_seamless": {
-            "mm_janela": 6.7,
-            "mm_largada": 1.2,
-            "prob_max_pct": 80,
+            "mm_janela": 0.8,
+            "mm_largada": 0.2,
+            "prob_max_pct": 33,
             "chove": true
           },
           "icon_seamless": {
@@ -163,9 +163,9 @@
             "chove": false
           },
           "gfs_seamless": {
-            "mm_janela": 7.6,
-            "mm_largada": 3.2,
-            "prob_max_pct": 87,
+            "mm_janela": 0.5,
+            "mm_largada": 0.0,
+            "prob_max_pct": 32,
             "chove": true
           },
           "icon_seamless": {
