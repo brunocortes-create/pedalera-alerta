@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-16T20:30:20.586821-03:00",
+  "gerado_em": "2026-10-16T21:46:35.267170-03:00",
   "data_alvo": "2026-10-17",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -28,7 +28,7 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 5,
-        "chuva_mm_max_modelos": 5.3,
+        "chuva_mm_max_modelos": 7.6,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.9,
@@ -43,15 +43,15 @@
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 5.3,
-            "mm_largada": 2.9,
-            "prob_max_pct": 96,
+            "mm_janela": 7.6,
+            "mm_largada": 6.8,
+            "prob_max_pct": 100,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 3.9,
             "mm_largada": 0.5,
-            "prob_max_pct": null,
+            "prob_max_pct": 90,
             "chove": true
           },
           "gem_seamless": {
@@ -88,7 +88,7 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 3,
-        "chuva_mm_max_modelos": 8.3,
+        "chuva_mm_max_modelos": 18.0,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.3,
@@ -103,15 +103,15 @@
             "chove": false
           },
           "gfs_seamless": {
-            "mm_janela": 8.3,
-            "mm_largada": 5.9,
-            "prob_max_pct": 95,
+            "mm_janela": 18.0,
+            "mm_largada": 16.6,
+            "prob_max_pct": 100,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 1.3,
             "mm_largada": 0.2,
-            "prob_max_pct": null,
+            "prob_max_pct": 93,
             "chove": true
           },
           "gem_seamless": {
@@ -148,7 +148,7 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 5,
-        "chuva_mm_max_modelos": 5.3,
+        "chuva_mm_max_modelos": 7.6,
         "detalhe": {
           "best_match": {
             "mm_janela": 0.9,
@@ -163,15 +163,15 @@
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 5.3,
-            "mm_largada": 2.9,
-            "prob_max_pct": 96,
+            "mm_janela": 7.6,
+            "mm_largada": 6.8,
+            "prob_max_pct": 100,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 3.9,
             "mm_largada": 0.5,
-            "prob_max_pct": null,
+            "prob_max_pct": 90,
             "chove": true
           },
           "gem_seamless": {
