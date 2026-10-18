@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-10-18T03:15:10.768327-03:00",
-  "hora_local": "03:15",
+  "gerado_em": "2026-10-18T06:55:17.465840-03:00",
+  "hora_local": "06:55",
   "data_alvo": "2026-10-18",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 06:55: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -35,8 +35,8 @@
         "estacao": "Recreio dos Bandeirantes",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 24.6,
-        "lido_em": "2026-10-18T03:05:00-03:00"
+        "mm_24h": 4.0,
+        "lido_em": "2026-10-18T06:50:00-03:00"
       }
     },
     "zona_sul": {
@@ -67,8 +67,8 @@
         "estacao": "Copacabana",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 25.6,
-        "lido_em": "2026-10-18T03:05:00-03:00"
+        "mm_24h": 0.8,
+        "lido_em": "2026-10-18T06:50:00-03:00"
       }
     },
     "grumari": {
@@ -99,8 +99,8 @@
         "estacao": "Grota Funda",
         "mm_1h": 0.0,
         "mm_3h": 0.0,
-        "mm_24h": 15.2,
-        "lido_em": "2026-10-18T03:05:00-03:00"
+        "mm_24h": 7.0,
+        "lido_em": "2026-10-18T06:50:00-03:00"
       }
     }
   },
