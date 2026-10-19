@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-10-18T20:30:19.621546-03:00",
+  "gerado_em": "2026-10-18T21:30:39.976945-03:00",
   "data_alvo": "2026-10-19",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
@@ -15,8 +15,8 @@
       "umidade_max_pct": 93,
       "visibilidade_min_m": 3840.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 100,
-      "chuva_prob_largada_pct": 100,
+      "chuva_prob_max_pct": 97,
+      "chuva_prob_largada_pct": 97,
       "chuva_mm_total": 1.7,
       "chuva_mm_madrugada_antes": 1.3,
       "vento_med_kmh": 11.8,
@@ -28,30 +28,30 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 4,
-        "chuva_mm_max_modelos": 3.8,
+        "chuva_mm_max_modelos": 1.7,
         "detalhe": {
           "best_match": {
             "mm_janela": 1.7,
             "mm_largada": 1.3,
-            "prob_max_pct": 100,
+            "prob_max_pct": 97,
             "chove": true
           },
           "ecmwf_ifs025": {
             "mm_janela": 1.6,
             "mm_largada": 1.2,
-            "prob_max_pct": 100,
+            "prob_max_pct": 97,
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 3.8,
-            "mm_largada": 3.1,
-            "prob_max_pct": 98,
+            "mm_janela": 1.4,
+            "mm_largada": 0.7,
+            "prob_max_pct": 91,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 0.3,
             "mm_largada": 0.2,
-            "prob_max_pct": null,
+            "prob_max_pct": 20,
             "chove": false
           },
           "gem_seamless": {
@@ -75,8 +75,8 @@
       "umidade_max_pct": 93,
       "visibilidade_min_m": 4380.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 97,
-      "chuva_prob_largada_pct": 92,
+      "chuva_prob_max_pct": 96,
+      "chuva_prob_largada_pct": 96,
       "chuva_mm_total": 2.4,
       "chuva_mm_madrugada_antes": 3.9,
       "vento_med_kmh": 13.0,
@@ -93,25 +93,25 @@
           "best_match": {
             "mm_janela": 2.4,
             "mm_largada": 2.2,
-            "prob_max_pct": 97,
+            "prob_max_pct": 96,
             "chove": true
           },
           "ecmwf_ifs025": {
             "mm_janela": 2.7,
             "mm_largada": 2.1,
-            "prob_max_pct": 97,
+            "prob_max_pct": 96,
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 2.4,
-            "mm_largada": 1.8,
+            "mm_janela": 1.5,
+            "mm_largada": 1.2,
             "prob_max_pct": 100,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 0.5,
             "mm_largada": 0.4,
-            "prob_max_pct": null,
+            "prob_max_pct": 50,
             "chove": true
           },
           "gem_seamless": {
@@ -135,8 +135,8 @@
       "umidade_max_pct": 93,
       "visibilidade_min_m": 3840.0,
       "risco_neblina": "baixo",
-      "chuva_prob_max_pct": 100,
-      "chuva_prob_largada_pct": 100,
+      "chuva_prob_max_pct": 97,
+      "chuva_prob_largada_pct": 97,
       "chuva_mm_total": 1.7,
       "chuva_mm_madrugada_antes": 1.3,
       "vento_med_kmh": 11.8,
@@ -148,30 +148,30 @@
       "modelos": {
         "modelos_total": 5,
         "modelos_com_chuva": 4,
-        "chuva_mm_max_modelos": 3.8,
+        "chuva_mm_max_modelos": 1.7,
         "detalhe": {
           "best_match": {
             "mm_janela": 1.7,
             "mm_largada": 1.3,
-            "prob_max_pct": 100,
+            "prob_max_pct": 97,
             "chove": true
           },
           "ecmwf_ifs025": {
             "mm_janela": 1.6,
             "mm_largada": 1.2,
-            "prob_max_pct": 100,
+            "prob_max_pct": 97,
             "chove": true
           },
           "gfs_seamless": {
-            "mm_janela": 3.8,
-            "mm_largada": 3.1,
-            "prob_max_pct": 98,
+            "mm_janela": 1.4,
+            "mm_largada": 0.7,
+            "prob_max_pct": 91,
             "chove": true
           },
           "icon_seamless": {
             "mm_janela": 0.3,
             "mm_largada": 0.2,
-            "prob_max_pct": null,
+            "prob_max_pct": 20,
             "chove": false
           },
           "gem_seamless": {
