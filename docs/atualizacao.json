@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-10-23T03:15:11.530014-03:00",
+  "gerado_em": "2026-10-24T03:15:13.746172-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-10-23",
+  "data_alvo": "2026-10-24",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -12,23 +12,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 46,
-        "chuva_prob_largada_pct": 39,
-        "chuva_mm_total": 0.7,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.0,
-        "rajada_max_kmh": 10.8,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 20,
-        "temp_max_janela_c": 22,
-        "sensacao_largada_c": 23,
-        "confianca": "media",
+        "vento_med_kmh": 4.9,
+        "rajada_max_kmh": 19.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 58,
-        "chuva_mm_total": 0.7,
-        "rajada_max_kmh": 10.8,
+        "chuva_prob_max_pct": 0,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 19.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -38,24 +38,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 30,
-        "chuva_prob_largada_pct": 29,
-        "chuva_mm_total": 1.9,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.3,
-        "rajada_max_kmh": 15.5,
-        "vento_dir_cardeal": "L",
+        "vento_med_kmh": 5.7,
+        "rajada_max_kmh": 18.0,
+        "vento_dir_cardeal": "N",
         "temp_min_c": 20,
-        "temp_max_janela_c": 21,
-        "sensacao_largada_c": 23,
-        "confianca": "baixa",
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 53,
-        "chuva_mm_total": 1.9,
-        "rajada_max_kmh": 15.5,
-        "confianca": "media"
+        "chuva_prob_max_pct": 0,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 18.0,
+        "confianca": "alta"
       },
       "medido_alerta_rio": null
     },
@@ -64,23 +64,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 46,
-        "chuva_prob_largada_pct": 39,
-        "chuva_mm_total": 0.7,
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.0,
-        "rajada_max_kmh": 10.8,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 20,
-        "temp_max_janela_c": 22,
-        "sensacao_largada_c": 22,
-        "confianca": "media",
+        "vento_med_kmh": 4.9,
+        "rajada_max_kmh": 19.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 58,
-        "chuva_mm_total": 0.7,
-        "rajada_max_kmh": 10.8,
+        "chuva_prob_max_pct": 0,
+        "chuva_mm_total": 0.0,
+        "rajada_max_kmh": 19.4,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -92,8 +92,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-10-22T21:57:18.706217-03:00",
-    "data_alvo": "2026-10-23",
-    "confianca_geral": "media"
+    "gerado_em": "2026-10-23T22:07:10.139108-03:00",
+    "data_alvo": "2026-10-24",
+    "confianca_geral": "alta"
   }
 }
