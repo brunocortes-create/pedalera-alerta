@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-10-24T06:48:54.011791-03:00",
-  "hora_local": "06:48",
-  "data_alvo": "2026-10-24",
-  "status": "confirmado",
-  "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 06:48: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "gerado_em": "2026-10-25T03:15:10.894449-03:00",
+  "hora_local": "03:15",
+  "data_alvo": "2026-10-25",
+  "status": "mudou_pior",
+  "titulo": "⚠️ MUDOU PRA PIOR",
+  "resumo": "Às 03:15 os modelos passaram a indicar chuva na janela 4h–8h (Zona Sul: 73%). Road: não vai. MTB: pista molhada, avalie com cuidado.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -12,50 +12,52 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 83,
+        "chuva_prob_largada_pct": 73,
+        "chuva_mm_total": 1.8,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 10.7,
-        "rajada_max_kmh": 24.8,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 21,
+        "vento_med_kmh": 12.7,
+        "rajada_max_kmh": 42.1,
+        "vento_dir_cardeal": "O",
+        "temp_min_c": 24,
         "temp_max_janela_c": 26,
-        "sensacao_largada_c": 23,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 19.4,
+        "chuva_prob_max_pct": 82,
+        "chuva_mm_total": 1.8,
+        "rajada_max_kmh": 42.1,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "status": "confirmado",
-      "motivos": [],
+      "status": "piorou",
+      "motivos": [
+        "modelos das 3h: 73% e 1.1 mm na janela (a noite dizia 45%)"
+      ],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 73,
+        "chuva_prob_largada_pct": 53,
+        "chuva_mm_total": 1.1,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.6,
-        "rajada_max_kmh": 20.2,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 24,
-        "sensacao_largada_c": 24,
+        "vento_med_kmh": 9.7,
+        "rajada_max_kmh": 44.3,
+        "vento_dir_cardeal": "O",
+        "temp_min_c": 25,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 29,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 18.0,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 45,
+        "chuva_mm_total": 1.1,
+        "rajada_max_kmh": 44.3,
+        "confianca": "baixa"
       },
       "medido_alerta_rio": null
     },
@@ -64,23 +66,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 83,
+        "chuva_prob_largada_pct": 73,
+        "chuva_mm_total": 1.8,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 10.7,
-        "rajada_max_kmh": 24.8,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 21,
+        "vento_med_kmh": 12.7,
+        "rajada_max_kmh": 42.1,
+        "vento_dir_cardeal": "O",
+        "temp_min_c": 23,
         "temp_max_janela_c": 25,
-        "sensacao_largada_c": 23,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 19.4,
+        "chuva_prob_max_pct": 60,
+        "chuva_mm_total": 1.8,
+        "rajada_max_kmh": 42.1,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -92,8 +94,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-10-23T22:07:10.139108-03:00",
-    "data_alvo": "2026-10-24",
-    "confianca_geral": "alta"
+    "gerado_em": "2026-10-24T21:31:30.389497-03:00",
+    "data_alvo": "2026-10-25",
+    "confianca_geral": "baixa"
   }
 }
