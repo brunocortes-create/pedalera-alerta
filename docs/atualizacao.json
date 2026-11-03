@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-02T03:15:12.389446-03:00",
-  "hora_local": "03:15",
-  "data_alvo": "2026-11-02",
+  "gerado_em": "2026-11-03T00:42:17.975653-03:00",
+  "hora_local": "00:42",
+  "data_alvo": "2026-11-03",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 00:42: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -12,23 +12,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 22,
+        "chuva_prob_largada_pct": 22,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 5.2,
-        "rajada_max_kmh": 15.8,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 25,
+        "vento_med_kmh": 9.6,
+        "rajada_max_kmh": 32.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 27,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 15.8,
+        "chuva_prob_max_pct": 16,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 44.3,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -38,23 +38,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 15,
+        "chuva_prob_largada_pct": 15,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 4.2,
-        "rajada_max_kmh": 17.3,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 25,
-        "sensacao_largada_c": 25,
+        "vento_med_kmh": 3.3,
+        "rajada_max_kmh": 13.7,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 26,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 17.3,
+        "chuva_prob_max_pct": 14,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 29.9,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -64,23 +64,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 22,
+        "chuva_prob_largada_pct": 22,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 5.2,
-        "rajada_max_kmh": 15.8,
-        "vento_dir_cardeal": "L",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 25,
+        "vento_med_kmh": 9.6,
+        "rajada_max_kmh": 32.4,
+        "vento_dir_cardeal": "NO",
+        "temp_min_c": 22,
+        "temp_max_janela_c": 27,
+        "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 15.8,
+        "chuva_prob_max_pct": 16,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 44.3,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -92,8 +92,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-01T22:49:46.496085-03:00",
-    "data_alvo": "2026-11-02",
+    "gerado_em": "2026-11-02T20:30:20.217706-03:00",
+    "data_alvo": "2026-11-03",
     "confianca_geral": "alta"
   }
 }
