@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-05T03:15:12.028809-03:00",
+  "gerado_em": "2026-11-06T03:15:12.771225-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-11-05",
+  "data_alvo": "2026-11-06",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -12,24 +12,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 28,
+        "chuva_prob_largada_pct": 2,
+        "chuva_mm_total": 0.2,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 13.3,
-        "rajada_max_kmh": 40.3,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 24,
-        "temp_max_janela_c": 29,
+        "vento_med_kmh": 6.3,
+        "rajada_max_kmh": 23.4,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 25,
         "sensacao_largada_c": 27,
-        "confianca": "media",
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 40.3,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 33,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 23.4,
+        "confianca": "media"
       },
       "medido_alerta_rio": null
     },
@@ -38,23 +38,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
+        "chuva_prob_max_pct": 7,
+        "chuva_prob_largada_pct": 2,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 7.3,
-        "rajada_max_kmh": 27.0,
-        "vento_dir_cardeal": "N",
+        "vento_med_kmh": 5.9,
+        "rajada_max_kmh": 23.8,
+        "vento_dir_cardeal": "SO",
         "temp_min_c": 23,
-        "temp_max_janela_c": 28,
+        "temp_max_janela_c": 25,
         "sensacao_largada_c": 27,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
+        "chuva_prob_max_pct": 20,
         "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 27.0,
+        "rajada_max_kmh": 23.8,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -64,24 +64,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 0,
-        "chuva_prob_largada_pct": 0,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 28,
+        "chuva_prob_largada_pct": 2,
+        "chuva_mm_total": 0.2,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 13.3,
-        "rajada_max_kmh": 40.3,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 24,
-        "temp_max_janela_c": 29,
+        "vento_med_kmh": 6.3,
+        "rajada_max_kmh": 23.4,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 25,
         "sensacao_largada_c": 27,
-        "confianca": "media",
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 0,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 40.3,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 33,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 23.4,
+        "confianca": "media"
       },
       "medido_alerta_rio": null
     }
@@ -92,8 +92,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-04T23:47:43.108296-03:00",
-    "data_alvo": "2026-11-05",
-    "confianca_geral": "alta"
+    "gerado_em": "2026-11-05T23:49:54.155471-03:00",
+    "data_alvo": "2026-11-06",
+    "confianca_geral": "media"
   }
 }
