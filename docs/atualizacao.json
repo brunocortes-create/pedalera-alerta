@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-07T03:15:11.723734-03:00",
+  "gerado_em": "2026-11-08T03:15:11.104364-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-11-07",
+  "data_alvo": "2026-11-08",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -12,23 +12,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 96,
+        "chuva_prob_largada_pct": 78,
+        "chuva_mm_total": 1.8,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 7.9,
-        "rajada_max_kmh": 18.7,
-        "vento_dir_cardeal": "NE",
+        "vento_med_kmh": 28.0,
+        "rajada_max_kmh": 70.2,
+        "vento_dir_cardeal": "SO",
         "temp_min_c": 22,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 25,
-        "confianca": "alta",
+        "temp_max_janela_c": 24,
+        "sensacao_largada_c": 23,
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 5,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 18.7,
+        "chuva_prob_max_pct": 99,
+        "chuva_mm_total": 10.0,
+        "rajada_max_kmh": 70.2,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -38,24 +38,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 6.0,
-        "rajada_max_kmh": 20.9,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 25,
-        "confianca": "alta",
+        "chuva_prob_max_pct": 65,
+        "chuva_prob_largada_pct": 37,
+        "chuva_mm_total": 1.0,
+        "chuva_mm_madrugada_antes": 0.1,
+        "vento_med_kmh": 26.0,
+        "rajada_max_kmh": 77.8,
+        "vento_dir_cardeal": "SO",
+        "temp_min_c": 23,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 2,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 20.9,
-        "confianca": "media"
+        "chuva_prob_max_pct": 82,
+        "chuva_mm_total": 3.6,
+        "rajada_max_kmh": 77.8,
+        "confianca": "alta"
       },
       "medido_alerta_rio": null
     },
@@ -64,23 +64,23 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 96,
+        "chuva_prob_largada_pct": 78,
+        "chuva_mm_total": 1.8,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 7.9,
-        "rajada_max_kmh": 18.7,
-        "vento_dir_cardeal": "NE",
+        "vento_med_kmh": 28.0,
+        "rajada_max_kmh": 70.2,
+        "vento_dir_cardeal": "SO",
         "temp_min_c": 22,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 25,
-        "confianca": "alta",
+        "temp_max_janela_c": 24,
+        "sensacao_largada_c": 23,
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 5,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 18.7,
+        "chuva_prob_max_pct": 99,
+        "chuva_mm_total": 1.8,
+        "rajada_max_kmh": 64.1,
         "confianca": "alta"
       },
       "medido_alerta_rio": null
@@ -92,8 +92,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-06T23:22:03.589606-03:00",
-    "data_alvo": "2026-11-07",
-    "confianca_geral": "media"
+    "gerado_em": "2026-11-07T22:50:18.258241-03:00",
+    "data_alvo": "2026-11-08",
+    "confianca_geral": "alta"
   }
 }
