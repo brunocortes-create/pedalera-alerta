@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-10T01:19:40.913238-03:00",
-  "hora_local": "01:19",
+  "gerado_em": "2026-11-10T03:15:10.991186-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-11-10",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 01:19: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -22,7 +22,7 @@
         "temp_min_c": 18,
         "temp_max_janela_c": 21,
         "sensacao_largada_c": 19,
-        "confianca": "alta",
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
@@ -48,7 +48,7 @@
         "temp_min_c": 19,
         "temp_max_janela_c": 21,
         "sensacao_largada_c": 20,
-        "confianca": "alta",
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
@@ -74,7 +74,7 @@
         "temp_min_c": 18,
         "temp_max_janela_c": 21,
         "sensacao_largada_c": 19,
-        "confianca": "alta",
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
