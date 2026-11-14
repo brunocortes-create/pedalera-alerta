@@ -1,7 +1,7 @@
 {
-  "gerado_em": "2026-11-13T03:15:12.771295-03:00",
+  "gerado_em": "2026-11-14T03:15:11.164211-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-11-13",
+  "data_alvo": "2026-11-14",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
   "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
@@ -12,24 +12,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 68,
+        "chuva_prob_largada_pct": 25,
+        "chuva_mm_total": 0.2,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 10.4,
-        "rajada_max_kmh": 25.9,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 27,
+        "vento_med_kmh": 8.7,
+        "rajada_max_kmh": 32.0,
+        "vento_dir_cardeal": "O",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 24,
         "sensacao_largada_c": 25,
-        "confianca": "alta",
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 25.9,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 68,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 32.0,
+        "confianca": "media"
       },
       "medido_alerta_rio": null
     },
@@ -38,24 +38,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 22,
+        "chuva_prob_largada_pct": 2,
+        "chuva_mm_total": 0.2,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 2.7,
-        "rajada_max_kmh": 14.0,
-        "vento_dir_cardeal": "N",
+        "vento_med_kmh": 8.8,
+        "rajada_max_kmh": 27.4,
+        "vento_dir_cardeal": "O",
         "temp_min_c": 22,
-        "temp_max_janela_c": 26,
-        "sensacao_largada_c": 26,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 25,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 14.0,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 22,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 27.4,
+        "confianca": "media"
       },
       "medido_alerta_rio": null
     },
@@ -64,24 +64,24 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 1,
-        "chuva_prob_largada_pct": 1,
-        "chuva_mm_total": 0.0,
+        "chuva_prob_max_pct": 68,
+        "chuva_prob_largada_pct": 25,
+        "chuva_mm_total": 0.2,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 10.4,
-        "rajada_max_kmh": 25.9,
-        "vento_dir_cardeal": "N",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 27,
-        "sensacao_largada_c": 25,
-        "confianca": "alta",
+        "vento_med_kmh": 8.7,
+        "rajada_max_kmh": 32.0,
+        "vento_dir_cardeal": "O",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 24,
+        "sensacao_largada_c": 24,
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 1,
-        "chuva_mm_total": 0.0,
-        "rajada_max_kmh": 25.9,
-        "confianca": "alta"
+        "chuva_prob_max_pct": 68,
+        "chuva_mm_total": 0.2,
+        "rajada_max_kmh": 32.0,
+        "confianca": "media"
       },
       "medido_alerta_rio": null
     }
@@ -92,8 +92,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-12T23:54:49.831413-03:00",
-    "data_alvo": "2026-11-13",
-    "confianca_geral": "alta"
+    "gerado_em": "2026-11-13T23:41:12.911391-03:00",
+    "data_alvo": "2026-11-14",
+    "confianca_geral": "media"
   }
 }
