@@ -1,87 +1,93 @@
 {
-  "gerado_em": "2026-11-14T03:15:11.164211-03:00",
+  "gerado_em": "2026-11-15T03:15:11.046296-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-11-14",
-  "status": "confirmado",
-  "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "data_alvo": "2026-11-15",
+  "status": "leitura",
+  "titulo": "🕒 LEITURA DAS 03:15",
+  "resumo": "Sem boletim da véspera pra comparar. Modelos agora, janela 4h–8h: Barra/Recreio: 3%; Zona Sul: 2%; Grumari: 3%.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "status": "confirmado",
-      "motivos": [],
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
       "agora": {
-        "chuva_prob_max_pct": 68,
-        "chuva_prob_largada_pct": 25,
-        "chuva_mm_total": 0.2,
+        "chuva_prob_max_pct": 3,
+        "chuva_prob_largada_pct": 3,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 8.7,
-        "rajada_max_kmh": 32.0,
-        "vento_dir_cardeal": "O",
+        "vento_med_kmh": 5.5,
+        "rajada_max_kmh": 21.2,
+        "vento_dir_cardeal": "NE",
         "temp_min_c": 21,
-        "temp_max_janela_c": 24,
-        "sensacao_largada_c": 25,
-        "confianca": "media",
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 68,
-        "chuva_mm_total": 0.2,
-        "rajada_max_kmh": 32.0,
-        "confianca": "media"
+        "chuva_prob_max_pct": null,
+        "chuva_mm_total": null,
+        "rajada_max_kmh": null,
+        "confianca": null
       },
       "medido_alerta_rio": null
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "status": "confirmado",
-      "motivos": [],
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
       "agora": {
-        "chuva_prob_max_pct": 22,
+        "chuva_prob_max_pct": 2,
         "chuva_prob_largada_pct": 2,
-        "chuva_mm_total": 0.2,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 8.8,
-        "rajada_max_kmh": 27.4,
-        "vento_dir_cardeal": "O",
-        "temp_min_c": 22,
-        "temp_max_janela_c": 25,
+        "vento_med_kmh": 3.2,
+        "rajada_max_kmh": 18.4,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 24,
         "sensacao_largada_c": 25,
         "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 22,
-        "chuva_mm_total": 0.2,
-        "rajada_max_kmh": 27.4,
-        "confianca": "media"
+        "chuva_prob_max_pct": null,
+        "chuva_mm_total": null,
+        "rajada_max_kmh": null,
+        "confianca": null
       },
       "medido_alerta_rio": null
     },
     "grumari": {
       "nome": "Grumari",
-      "status": "confirmado",
-      "motivos": [],
+      "status": "sem_vespera",
+      "motivos": [
+        "boletim da vespera nao tinha este ponto"
+      ],
       "agora": {
-        "chuva_prob_max_pct": 68,
-        "chuva_prob_largada_pct": 25,
-        "chuva_mm_total": 0.2,
+        "chuva_prob_max_pct": 3,
+        "chuva_prob_largada_pct": 3,
+        "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 8.7,
-        "rajada_max_kmh": 32.0,
-        "vento_dir_cardeal": "O",
-        "temp_min_c": 21,
+        "vento_med_kmh": 5.5,
+        "rajada_max_kmh": 21.2,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 20,
         "temp_max_janela_c": 24,
         "sensacao_largada_c": 24,
-        "confianca": "media",
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
-        "chuva_prob_max_pct": 68,
-        "chuva_mm_total": 0.2,
-        "rajada_max_kmh": 32.0,
-        "confianca": "media"
+        "chuva_prob_max_pct": null,
+        "chuva_mm_total": null,
+        "rajada_max_kmh": null,
+        "confianca": null
       },
       "medido_alerta_rio": null
     }
@@ -92,8 +98,8 @@
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-13T23:41:12.911391-03:00",
-    "data_alvo": "2026-11-14",
-    "confianca_geral": "media"
+    "gerado_em": "2026-11-14T23:07:53.345947-03:00",
+    "data_alvo": "2026-11-15",
+    "confianca_geral": "indefinida"
   }
 }
