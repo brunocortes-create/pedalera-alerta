@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-15T03:15:11.046296-03:00",
+  "gerado_em": "2026-11-16T03:15:12.707217-03:00",
   "hora_local": "03:15",
-  "data_alvo": "2026-11-15",
-  "status": "leitura",
-  "titulo": "🕒 LEITURA DAS 03:15",
-  "resumo": "Sem boletim da véspera pra comparar. Modelos agora, janela 4h–8h: Barra/Recreio: 3%; Zona Sul: 2%; Grumari: 3%.",
+  "data_alvo": "2026-11-16",
+  "status": "indisponivel",
+  "titulo": "⚠️ Atualização das 3h não rodou",
+  "resumo": "A fonte de clima não respondeu. Vale o boletim da noite — e confira o céu e a câmera do seu trecho antes de sair.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -14,18 +14,18 @@
         "boletim da vespera nao tinha este ponto"
       ],
       "agora": {
-        "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
-        "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 5.5,
-        "rajada_max_kmh": 21.2,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 25,
-        "sensacao_largada_c": 24,
-        "confianca": "alta",
-        "ok": true
+        "chuva_prob_max_pct": null,
+        "chuva_prob_largada_pct": null,
+        "chuva_mm_total": null,
+        "chuva_mm_madrugada_antes": null,
+        "vento_med_kmh": null,
+        "rajada_max_kmh": null,
+        "vento_dir_cardeal": null,
+        "temp_min_c": null,
+        "temp_max_janela_c": null,
+        "sensacao_largada_c": null,
+        "confianca": null,
+        "ok": false
       },
       "vespera": {
         "chuva_prob_max_pct": null,
@@ -42,18 +42,18 @@
         "boletim da vespera nao tinha este ponto"
       ],
       "agora": {
-        "chuva_prob_max_pct": 2,
-        "chuva_prob_largada_pct": 2,
-        "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 3.2,
-        "rajada_max_kmh": 18.4,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 21,
-        "temp_max_janela_c": 24,
-        "sensacao_largada_c": 25,
-        "confianca": "alta",
-        "ok": true
+        "chuva_prob_max_pct": null,
+        "chuva_prob_largada_pct": null,
+        "chuva_mm_total": null,
+        "chuva_mm_madrugada_antes": null,
+        "vento_med_kmh": null,
+        "rajada_max_kmh": null,
+        "vento_dir_cardeal": null,
+        "temp_min_c": null,
+        "temp_max_janela_c": null,
+        "sensacao_largada_c": null,
+        "confianca": null,
+        "ok": false
       },
       "vespera": {
         "chuva_prob_max_pct": null,
@@ -70,18 +70,18 @@
         "boletim da vespera nao tinha este ponto"
       ],
       "agora": {
-        "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
-        "chuva_mm_total": 0.0,
-        "chuva_mm_madrugada_antes": 0.0,
-        "vento_med_kmh": 5.5,
-        "rajada_max_kmh": 21.2,
-        "vento_dir_cardeal": "NE",
-        "temp_min_c": 20,
-        "temp_max_janela_c": 24,
-        "sensacao_largada_c": 24,
-        "confianca": "alta",
-        "ok": true
+        "chuva_prob_max_pct": null,
+        "chuva_prob_largada_pct": null,
+        "chuva_mm_total": null,
+        "chuva_mm_madrugada_antes": null,
+        "vento_med_kmh": null,
+        "rajada_max_kmh": null,
+        "vento_dir_cardeal": null,
+        "temp_min_c": null,
+        "temp_max_janela_c": null,
+        "sensacao_largada_c": null,
+        "confianca": null,
+        "ok": false
       },
       "vespera": {
         "chuva_prob_max_pct": null,
@@ -93,13 +93,13 @@
     }
   },
   "fontes": {
-    "open_meteo": true,
+    "open_meteo": false,
     "alerta_rio": false,
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
   "vespera": {
-    "gerado_em": "2026-11-14T23:07:53.345947-03:00",
-    "data_alvo": "2026-11-15",
+    "gerado_em": "2026-11-15T23:23:29.458478-03:00",
+    "data_alvo": "2026-11-16",
     "confianca_geral": "indefinida"
   }
 }
