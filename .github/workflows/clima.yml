@@ -6,7 +6,7 @@ name: Coletar Clima Pedal Rio
 # Gatilho PRINCIPAL é o cron-job.org (chama workflow_dispatch nesses dois horários).
 # Os crons abaixo são só BACKUP — o cron nativo do GitHub atrasa ~1h de forma consistente.
 # Se a Open-Meteo não responder, o último passo dispara nova execução (outro
-# runner), até 3 tentativas — ver "Conferir Open-Meteo" (16/11/2026).
+# runner), até 5 tentativas — ver "Conferir Open-Meteo" (16/11/2026).
 
 on:
   schedule:
@@ -83,10 +83,10 @@ jobs:
           git push
 
       # Sem Open-Meteo nesta execução (todos os pontos falharam, ou o arquivo não
-      # é do dia certo) → espera 60 s e dispara outra execução, que cai em outro
-      # runner. Até 3 tentativas. A execução sem Open-Meteo termina com erro
+      # é do dia certo) → espera 30 s e dispara outra execução, que cai em outro
+      # runner. Até 5 tentativas. A execução sem Open-Meteo termina com erro
       # (fica vermelha no Actions) — antes ela saía "success" e ninguém sabia.
-      - name: Conferir Open-Meteo (sem resposta → nova tentativa, até 3)
+      - name: Conferir Open-Meteo (sem resposta → nova tentativa, até 5)
         if: always() && steps.modo.outputs.modo != ''
         env:
           GH_TOKEN: ${{ github.token }}
@@ -111,13 +111,13 @@ jobs:
           sys.exit(0 if ok else 1)
           PY
           then exit 0; fi
-          if [ "$TENTATIVA" -lt 3 ]; then
+          if [ "$TENTATIVA" -lt 5 ]; then
             PROX=$((TENTATIVA + 1))
-            echo "Aguardando 60 s e disparando a tentativa $PROX de 3 (novo runner)..."
-            sleep 60
+            echo "Aguardando 30 s e disparando a tentativa $PROX de 5 (novo runner)..."
+            sleep 30
             gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/clima.yml/dispatches" \
               -f ref=main -f "inputs[modo]=$MODO" -f "inputs[tentativa]=$PROX"
           else
-            echo "3 tentativas sem Open-Meteo. Fim — a Routine e a página vão mostrar o aviso."
+            echo "5 tentativas sem Open-Meteo. Fim — a Routine e a página vão mostrar o aviso."
           fi
           exit 1

@@ -12,10 +12,12 @@ campos da v4 continuam existindo com o mesmo significado.
 
 v5.1 (16/11/2026): a Open-Meteo passou a falhar de forma intermitente a partir
 do GitHub Actions ("SSL handshake timed out" nos 3 pontos — 14/11 23h07,
-15/11 23h23, 16/11 03h15 e 20h30). Agora: (1) cada chamada tenta 3 vezes
-(espera 5 s e 15 s); (2) se TODOS os pontos falharem, nao apaga a previsao boa
-da coleta principal (>= 20h da vespera) para o mesmo dia. O workflow confere o
-resultado e, sem Open-Meteo, dispara nova execucao (outro runner), ate 3x.
+15/11 23h23, 16/11 03h15 e 20h30), sempre em runners do oeste dos EUA
+(westus2/westus3). Agora: (1) cada chamada tenta 3 vezes (espera 5 s e 15 s),
+com corte rapido depois que a rede cai; (2) se TODOS os pontos falharem, nao
+apaga a previsao boa da coleta principal (>= 20h da vespera) para o mesmo dia.
+O workflow confere o resultado e, sem Open-Meteo, dispara nova execucao (outro
+runner), ate 5 tentativas.
 
 Este arquivo DEVE ficar na raiz do repositorio (o workflow chama sem caminho).
 """
@@ -43,26 +45,36 @@ def graus_para_cardeal(g):
 
 TENTATIVAS = 3          # por chamada a Open-Meteo
 ESPERAS_S = (5, 15)     # pausa antes da 2a e da 3a tentativa
+_REDE = {"fora": False} # vira True quando uma chamada esgota as 3 tentativas
 
 def _get(url, timeout=20):
     """GET com retentativa. Falha de rede, timeout (inclusive o handshake SSL),
     HTTP 429 ou 5xx -> tenta de novo. Outros HTTP 4xx (pedido errado) sobem na
-    hora, sem repetir. Pior caso por chamada: 3 x 20 s + 20 s de pausa = 80 s."""
+    hora, sem repetir. Pior caso por chamada: 3 x 20 s + 20 s de pausa = 80 s.
+    Corte rapido: depois que uma chamada esgota as tentativas, as seguintes
+    tentam 1 vez so (ate alguma responder). Em 16/11 22h21 (runner westus3) as
+    3 tentativas falharam nos 3 pontos — a falha e do runner, nao um soluco; o
+    remedio e o workflow redisparar em outro runner, entao nao vale gastar
+    4 min aqui."""
     ultimo = None
-    for n in range(TENTATIVAS):
+    tentativas = 1 if _REDE["fora"] else TENTATIVAS
+    for n in range(tentativas):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "PedalRio/5.0"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return json.loads(r.read().decode())
+                dados = json.loads(r.read().decode())
+            _REDE["fora"] = False
+            return dados
         except urllib.error.HTTPError as e:
             if e.code != 429 and e.code < 500:
                 raise
             ultimo = e
         except OSError as e:    # URLError, TimeoutError, ssl.SSLError, ConnectionError
             ultimo = e
-        if n < TENTATIVAS - 1:
+        if n < tentativas - 1:
             time.sleep(ESPERAS_S[n])
-    raise RuntimeError(f"{ultimo} ({TENTATIVAS} tentativas)") from ultimo
+    _REDE["fora"] = True
+    raise RuntimeError(f"{ultimo} ({tentativas} tentativa{'s' if tentativas > 1 else ''})") from ultimo
 
 def coletar(lat, lon, forecast_days=2):
     """Chamada principal (best_match), identica a v4 — campos sem sufixo."""
