@@ -1,24 +1,189 @@
 {
-  "gerado_em": "2026-11-16T20:30:25.897032-03:00",
+  "gerado_em": "2026-11-16T22:11:17.785093-03:00",
   "data_alvo": "2026-11-17",
   "fonte": "Open-Meteo",
   "versao_coletor": 5,
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "temp_min_c": 22,
+      "temp_max_janela_c": 24,
+      "temp_med_c": 23,
+      "sensacao_min_c": 25,
+      "sensacao_largada_c": 25,
+      "sensacao_final_c": 27,
+      "umidade_max_pct": 96,
+      "visibilidade_min_m": 4980.0,
+      "risco_neblina": "medio",
+      "chuva_prob_max_pct": 60,
+      "chuva_prob_largada_pct": 59,
+      "chuva_mm_total": 0.9,
+      "chuva_mm_madrugada_antes": 0.1,
+      "vento_med_kmh": 9.0,
+      "rajada_max_kmh": 22.3,
+      "vento_dir_graus": 192,
+      "vento_dir_cardeal": "S",
+      "nascer_do_sol": "05:01",
+      "ok": true,
+      "modelos": {
+        "modelos_total": 5,
+        "modelos_com_chuva": 4,
+        "chuva_mm_max_modelos": 1.6,
+        "detalhe": {
+          "best_match": {
+            "mm_janela": 0.9,
+            "mm_largada": 0.0,
+            "prob_max_pct": 60,
+            "chove": true
+          },
+          "ecmwf_ifs025": {
+            "mm_janela": 1.6,
+            "mm_largada": 1.2,
+            "prob_max_pct": 60,
+            "chove": true
+          },
+          "gfs_seamless": {
+            "mm_janela": 0.7,
+            "mm_largada": 0.0,
+            "prob_max_pct": 48,
+            "chove": true
+          },
+          "icon_seamless": {
+            "mm_janela": 0.8,
+            "mm_largada": 0.1,
+            "prob_max_pct": 43,
+            "chove": true
+          },
+          "gem_seamless": {
+            "mm_janela": 0.1,
+            "mm_largada": 0.0,
+            "prob_max_pct": 51,
+            "chove": false
+          }
+        }
+      },
+      "confianca": "media"
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "temp_min_c": 22,
+      "temp_max_janela_c": 24,
+      "temp_med_c": 23,
+      "sensacao_min_c": 25,
+      "sensacao_largada_c": 25,
+      "sensacao_final_c": 27,
+      "umidade_max_pct": 96,
+      "visibilidade_min_m": 7340.0,
+      "risco_neblina": "medio",
+      "chuva_prob_max_pct": 45,
+      "chuva_prob_largada_pct": 29,
+      "chuva_mm_total": 0.5,
+      "chuva_mm_madrugada_antes": 0.0,
+      "vento_med_kmh": 8.0,
+      "rajada_max_kmh": 24.8,
+      "vento_dir_graus": 223,
+      "vento_dir_cardeal": "SO",
+      "nascer_do_sol": "05:00",
+      "ok": true,
+      "modelos": {
+        "modelos_total": 5,
+        "modelos_com_chuva": 4,
+        "chuva_mm_max_modelos": 0.7,
+        "detalhe": {
+          "best_match": {
+            "mm_janela": 0.5,
+            "mm_largada": 0.1,
+            "prob_max_pct": 45,
+            "chove": true
+          },
+          "ecmwf_ifs025": {
+            "mm_janela": 0.5,
+            "mm_largada": 0.3,
+            "prob_max_pct": 45,
+            "chove": true
+          },
+          "gfs_seamless": {
+            "mm_janela": 0.7,
+            "mm_largada": 0.1,
+            "prob_max_pct": 52,
+            "chove": true
+          },
+          "icon_seamless": {
+            "mm_janela": 0.5,
+            "mm_largada": 0.0,
+            "prob_max_pct": 35,
+            "chove": true
+          },
+          "gem_seamless": {
+            "mm_janela": 0.4,
+            "mm_largada": 0.0,
+            "prob_max_pct": 40,
+            "chove": false
+          }
+        }
+      },
+      "confianca": "media"
     },
     "grumari": {
       "nome": "Grumari",
-      "ok": false,
-      "erro": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+      "temp_min_c": 22,
+      "temp_max_janela_c": 23,
+      "temp_med_c": 22,
+      "sensacao_min_c": 25,
+      "sensacao_largada_c": 25,
+      "sensacao_final_c": 27,
+      "umidade_max_pct": 96,
+      "visibilidade_min_m": 4980.0,
+      "risco_neblina": "medio",
+      "chuva_prob_max_pct": 60,
+      "chuva_prob_largada_pct": 59,
+      "chuva_mm_total": 0.9,
+      "chuva_mm_madrugada_antes": 0.1,
+      "vento_med_kmh": 9.0,
+      "rajada_max_kmh": 22.3,
+      "vento_dir_graus": 192,
+      "vento_dir_cardeal": "S",
+      "nascer_do_sol": "05:01",
+      "ok": true,
+      "modelos": {
+        "modelos_total": 5,
+        "modelos_com_chuva": 4,
+        "chuva_mm_max_modelos": 1.6,
+        "detalhe": {
+          "best_match": {
+            "mm_janela": 0.9,
+            "mm_largada": 0.0,
+            "prob_max_pct": 60,
+            "chove": true
+          },
+          "ecmwf_ifs025": {
+            "mm_janela": 1.6,
+            "mm_largada": 1.2,
+            "prob_max_pct": 60,
+            "chove": true
+          },
+          "gfs_seamless": {
+            "mm_janela": 0.7,
+            "mm_largada": 0.0,
+            "prob_max_pct": 48,
+            "chove": true
+          },
+          "icon_seamless": {
+            "mm_janela": 0.8,
+            "mm_largada": 0.1,
+            "prob_max_pct": 43,
+            "chove": true
+          },
+          "gem_seamless": {
+            "mm_janela": 0.1,
+            "mm_largada": 0.0,
+            "prob_max_pct": 51,
+            "chove": false
+          }
+        }
+      },
+      "confianca": "media"
     }
   },
-  "confianca_geral": "indefinida"
+  "confianca_geral": "media"
 }
