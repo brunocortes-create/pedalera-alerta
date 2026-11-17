@@ -10,9 +10,16 @@ e calcula `confianca` por divergencia de chuva na janela. Adiciona
 `chuva_prob_largada_pct` (max 4h-6h). Campos novos sao ADITIVOS — todos os
 campos da v4 continuam existindo com o mesmo significado.
 
+v5.1 (16/11/2026): a Open-Meteo passou a falhar de forma intermitente a partir
+do GitHub Actions ("SSL handshake timed out" nos 3 pontos — 14/11 23h07,
+15/11 23h23, 16/11 03h15 e 20h30). Agora: (1) cada chamada tenta 3 vezes
+(espera 5 s e 15 s); (2) se TODOS os pontos falharem, nao apaga a previsao boa
+da coleta principal (>= 20h da vespera) para o mesmo dia. O workflow confere o
+resultado e, sem Open-Meteo, dispara nova execucao (outro runner), ate 3x.
+
 Este arquivo DEVE ficar na raiz do repositorio (o workflow chama sem caminho).
 """
-import urllib.request, json, datetime, zoneinfo
+import urllib.request, urllib.error, json, datetime, zoneinfo, time
 
 PONTOS = {
     "barra_recreio": {"lat": -23.02, "lon": -43.44, "nome": "Barra/Recreio"},
@@ -34,10 +41,28 @@ def graus_para_cardeal(g):
     if g is None: return "?"
     return ["N","NE","L","SE","S","SO","O","NO"][round(g / 45) % 8]
 
-def _get(url, timeout=30):
-    req = urllib.request.Request(url, headers={"User-Agent": "PedalRio/5.0"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
+TENTATIVAS = 3          # por chamada a Open-Meteo
+ESPERAS_S = (5, 15)     # pausa antes da 2a e da 3a tentativa
+
+def _get(url, timeout=20):
+    """GET com retentativa. Falha de rede, timeout (inclusive o handshake SSL),
+    HTTP 429 ou 5xx -> tenta de novo. Outros HTTP 4xx (pedido errado) sobem na
+    hora, sem repetir. Pior caso por chamada: 3 x 20 s + 20 s de pausa = 80 s."""
+    ultimo = None
+    for n in range(TENTATIVAS):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "PedalRio/5.0"})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.loads(r.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code != 429 and e.code < 500:
+                raise
+            ultimo = e
+        except OSError as e:    # URLError, TimeoutError, ssl.SSLError, ConnectionError
+            ultimo = e
+        if n < TENTATIVAS - 1:
+            time.sleep(ESPERAS_S[n])
+    raise RuntimeError(f"{ultimo} ({TENTATIVAS} tentativas)") from ultimo
 
 def coletar(lat, lon, forecast_days=2):
     """Chamada principal (best_match), identica a v4 — campos sem sufixo."""
@@ -177,6 +202,32 @@ def coletar_ponto(chave, p, alvo, forecast_days=2):
         saida["confianca"] = "indefinida"
     return saida
 
+ARQ_SAIDA = "config/clima-amanha.json"
+
+def manter_arquivo_bom(saida, caminho=ARQ_SAIDA):
+    """True quando esta coleta falhou em TODOS os pontos e o arquivo atual ja tem
+    previsao boa para o MESMO dia, feita pela coleta principal (>= 20h da
+    vespera). Nesse caso o arquivo fica como esta: o backup das ~23h nao pode
+    apagar a previsao que o boletim das 21h usou. Uma previsao boa mais antiga
+    (ex.: backup das ~10h) NAO e protegida — melhor a Routine abortar avisando
+    do que publicar previsao velha sem aviso (doc 06, item 15)."""
+    if any(p.get("ok") for p in saida["pontos"].values()):
+        return False
+    try:
+        with open(caminho, encoding="utf-8") as f:
+            atual = json.load(f)
+        if atual.get("data_alvo") != saida["data_alvo"]:
+            return False
+        if not any(p.get("ok") for p in atual.get("pontos", {}).values()):
+            return False
+        gerado = datetime.datetime.fromisoformat(atual["gerado_em"])
+        alvo = datetime.date.fromisoformat(saida["data_alvo"])
+        limite = datetime.datetime.combine(alvo - datetime.timedelta(days=1),
+                                           datetime.time(20, 0), TZ)
+        return gerado >= limite
+    except Exception:
+        return False
+
 def main():
     agora = datetime.datetime.now(TZ)
     amanha = (agora + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
@@ -191,7 +242,12 @@ def main():
     ordem = {"baixa": 0, "indefinida": 1, "media": 2, "alta": 3}
     confs = [pt.get("confianca") for pt in saida["pontos"].values() if pt.get("ok")]
     saida["confianca_geral"] = min(confs, key=lambda c: ordem.get(c, 1)) if confs else "indefinida"
-    with open("config/clima-amanha.json", "w", encoding="utf-8") as f:
+    if manter_arquivo_bom(saida):
+        print("Open-Meteo nao respondeu em nenhum ponto. Mantido o " + ARQ_SAIDA +
+              " da coleta principal (mesmo data_alvo, gerado depois das 20h).")
+        print(json.dumps(saida["pontos"], ensure_ascii=False, indent=2))
+        return
+    with open(ARQ_SAIDA, "w", encoding="utf-8") as f:
         json.dump(saida, f, ensure_ascii=False, indent=2)
     print(json.dumps(saida, ensure_ascii=False, indent=2))
 

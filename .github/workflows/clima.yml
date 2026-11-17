@@ -5,6 +5,8 @@ name: Coletar Clima Pedal Rio
 #   • ~03h15 BRT → modo "madrugada":  atualizar_madrugada.py → docs/atualizacao.json (a página mostra)
 # Gatilho PRINCIPAL é o cron-job.org (chama workflow_dispatch nesses dois horários).
 # Os crons abaixo são só BACKUP — o cron nativo do GitHub atrasa ~1h de forma consistente.
+# Se a Open-Meteo não responder, o último passo dispara nova execução (outro
+# runner), até 3 tentativas — ver "Conferir Open-Meteo" (16/11/2026).
 
 on:
   schedule:
@@ -17,9 +19,14 @@ on:
         type: choice
         options: [auto, clima, madrugada]
         default: auto
+      tentativa:
+        description: 'uso interno — nº da tentativa (o próprio workflow redispara se a Open-Meteo não responder)'
+        type: string
+        default: '1'
 
 permissions:
   contents: write
+  actions: write     # para redisparar este workflow quando a Open-Meteo não responde
 
 # Nunca dois pushes ao mesmo tempo (cron-job.org + backup podem coincidir)
 concurrency:
@@ -74,3 +81,43 @@ jobs:
           fi
           git pull --rebase origin main
           git push
+
+      # Sem Open-Meteo nesta execução (todos os pontos falharam, ou o arquivo não
+      # é do dia certo) → espera 60 s e dispara outra execução, que cai em outro
+      # runner. Até 3 tentativas. A execução sem Open-Meteo termina com erro
+      # (fica vermelha no Actions) — antes ela saía "success" e ninguém sabia.
+      - name: Conferir Open-Meteo (sem resposta → nova tentativa, até 3)
+        if: always() && steps.modo.outputs.modo != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MODO: ${{ steps.modo.outputs.modo }}
+          TENTATIVA: ${{ github.event.inputs.tentativa || '1' }}
+        run: |
+          if python3 - <<'PY'
+          import json, os, sys, datetime, zoneinfo
+          hoje = datetime.datetime.now(zoneinfo.ZoneInfo("America/Sao_Paulo")).date()
+          try:
+              if os.environ["MODO"] == "madrugada":
+                  d = json.load(open("docs/atualizacao.json", encoding="utf-8"))
+                  ok = d.get("data_alvo") == hoje.isoformat() and d.get("fontes", {}).get("open_meteo") is True
+              else:
+                  d = json.load(open("config/clima-amanha.json", encoding="utf-8"))
+                  amanha = (hoje + datetime.timedelta(days=1)).isoformat()
+                  ok = d.get("data_alvo") == amanha and any(p.get("ok") for p in d.get("pontos", {}).values())
+          except Exception as e:
+              print("Nao consegui ler o arquivo:", e)
+              ok = False
+          print("Open-Meteo OK." if ok else "Open-Meteo NAO respondeu nesta execucao.")
+          sys.exit(0 if ok else 1)
+          PY
+          then exit 0; fi
+          if [ "$TENTATIVA" -lt 3 ]; then
+            PROX=$((TENTATIVA + 1))
+            echo "Aguardando 60 s e disparando a tentativa $PROX de 3 (novo runner)..."
+            sleep 60
+            gh api -X POST "repos/$GITHUB_REPOSITORY/actions/workflows/clima.yml/dispatches" \
+              -f ref=main -f "inputs[modo]=$MODO" -f "inputs[tentativa]=$PROX"
+          else
+            echo "3 tentativas sem Open-Meteo. Fim — a Routine e a página vão mostrar o aviso."
+          fi
+          exit 1
