@@ -177,7 +177,7 @@
 
 <footer class="rodape">
   <p id="rodapeGerado"></p>
-  <p>Novo boletim todo dia ~21h. Atualização automática ~3h15 da madrugada (modelos + pluviômetros do Alerta Rio). Fonte de clima: Open-Meteo, 5 modelos.</p>
+  <p>Novo boletim todo dia ~21h. Atualização automática ~3h15 da madrugada (modelos<span id="fontePluv"></span>). Fonte de clima: Open-Meteo, 5 modelos.</p>
   <p>Viu algo na rua? Manda no <a href="https://chat.whatsapp.com/I2MrUmgBdP7Bx4u66FMYrA" target="_blank" rel="noopener">grupo Pedal Rio</a> que a gente repassa. 🚲</p>
 </footer>
 <div class="toast" id="toast">Copiado</div>
@@ -280,7 +280,8 @@
     if(!a || a.data_alvo!==dataBoletim){
       // ainda não rodou para este pedal
       if(dataBoletim && (dataBoletim>hoje || (dataBoletim===hoje && hora<4))){
-        return '<section class="atual pendente"><p class="rot">Atualização automática</p><h2 style="color:var(--apagado)">🔄 Às 3h15 da madrugada</h2><p>Os modelos são relidos e os pluviômetros do Alerta Rio são conferidos ~1h antes da largada. Se algo mudar, aparece aqui, em cima do boletim.</p></section>';
+        // só promete pluviômetro se a última leitura das 3h15 conseguiu ler o Alerta Rio
+        return '<section class="atual pendente"><p class="rot">Atualização automática</p><h2 style="color:var(--apagado)">🔄 Às 3h15 da madrugada</h2><p>Os modelos são relidos'+(alertaRioOk(a)?' e os pluviômetros do Alerta Rio são conferidos':'')+' ~1h antes da largada. Se algo mudar, aparece aqui, em cima do boletim.</p></section>';
       }
       return '';
     }
@@ -301,6 +302,7 @@
     return h;
   }
   function agraoRioSafe(){try{return agoraRio();}catch(e){return new Date();}}
+  function alertaRioOk(a){return !!(a&&a.fontes&&a.fontes.alerta_rio===true);}
 
   function rotuloData(dataAlvo){
     var hoje=ymd(agraoRioSafe()), d=new Date(agraoRioSafe().getTime()+86400000), amanha=ymd(d);
@@ -316,6 +318,7 @@
       fetch(BASE+'atualizacao.json?t='+t).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
     ]).then(function(res){
       var b=res[0], a=res[1], app=document.getElementById('app');
+      document.getElementById('fontePluv').textContent=alertaRioOk(a)?' + pluviômetros do Alerta Rio':'';
       if(!b||!b.texto){ app.innerHTML='<div class="vazio">Ainda não tem boletim publicado. O primeiro sai hoje ~21h.</div>'; return; }
       texto=b.texto; textoSemanal=b.texto_semanal||null;
       var p; try{ p=parse(b.texto); }catch(e){ p=null; }
