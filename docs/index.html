@@ -10,6 +10,14 @@
 <meta property="og:description" content="Pista, chuva, vento, APCC e interdições por trecho, todo dia às 21h. Atualização automática às 3h da madrugada.">
 <meta property="og:url" content="https://brunocortes-create.github.io/pedalera-alerta/">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://brunocortes-create.github.io/pedalera-alerta/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Selo do Pedal Rio">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icone-192.png">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<meta name="apple-mobile-web-app-title" content="Pedal Rio">
 <title>Boletim · Pedal Rio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +39,8 @@
   :focus-visible{outline:2px solid var(--farol);outline-offset:3px;}
 
   .topo{padding:28px 0 12px;}
+  .topo-linha{display:flex;align-items:center;justify-content:space-between;gap:14px;}
+  .selo{width:clamp(64px,19vw,84px);height:auto;flex:none;}
   .marca{font-family:var(--dado);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--farol);margin:0 0 6px;}
   .titulo{font-family:var(--display);font-weight:700;font-size:clamp(44px,14vw,64px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;margin:0;}
   .titulo small{display:block;font-size:.42em;letter-spacing:.06em;color:var(--apagado);font-weight:600;margin-top:6px;}
@@ -96,6 +106,23 @@
   details.semanal pre{white-space:pre-wrap;font:inherit;font-size:14.5px;margin:0 0 16px;}
   pre.bruto{white-space:pre-wrap;font:inherit;font-size:15px;background:var(--bruma);border:1px solid var(--asfalto);border-radius:14px;padding:16px;margin:18px 0 0;}
 
+  /* apoio via PIX (bloco fixo, fora do #app: não é redesenhado a cada 5 min) */
+  .apoie{margin:34px 0 0;padding:18px 16px;border-radius:14px;background:var(--bruma);border:1px solid var(--asfalto);scroll-margin-top:16px;}
+  .apoie .rot{font-family:var(--dado);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--apagado);margin:0 0 6px;}
+  .apoie h2{font-family:var(--display);font-size:30px;line-height:1;margin:0 0 10px;text-transform:uppercase;letter-spacing:.02em;color:var(--farol);}
+  .apoie p{margin:0 0 8px;font-size:15px;}
+  .apoie .destaque{color:var(--farol);font-weight:600;}
+  .pix{display:grid;gap:16px;margin-top:14px;}
+  .pix .qr{order:2;justify-self:center;background:#fff;border-radius:12px;padding:8px;line-height:0;}
+  .pix .qr img{width:184px;height:184px;display:block;}
+  .pix .chave{font-family:var(--dado);font-size:13.5px;line-height:1.45;overflow-wrap:anywhere;-webkit-user-select:all;user-select:all;
+       background:#0d132b;border:1px solid var(--asfalto);border-radius:9px;padding:10px 12px;margin:0 0 8px;}
+  .pix .quem{font-size:13.5px;color:var(--apagado);margin:0;}
+  .pix .acoes{margin:12px 0 0;}
+  .apoie .dica{font-size:13.5px;color:var(--apagado);margin:14px 0 0;}
+  @media (min-width:560px){.pix{grid-template-columns:auto 1fr;align-items:center;}.pix .qr{order:0;}}
+  @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;}}
+
   .rodape{margin-top:40px;padding-top:18px;border-top:1px solid var(--asfalto);font-size:13px;color:var(--apagado);}
   .rodape a{color:var(--farol);} .rodape p{margin:0 0 8px;}
   .vazio{margin:28px 0;padding:20px;border:1px dashed var(--asfalto);border-radius:14px;color:var(--apagado);}
@@ -107,17 +134,46 @@
 <body>
 
 <header class="topo">
-  <p class="marca">Pedal Rio</p>
-  <h1 class="titulo" id="h1">Boletim<small id="h1data">carregando…</small></h1>
+  <div class="topo-linha">
+    <div>
+      <p class="marca">Pedal Rio</p>
+      <h1 class="titulo" id="h1">Boletim<small id="h1data">carregando…</small></h1>
+    </div>
+    <img class="selo" src="img/selo-192.png" width="84" height="84" alt="">
+  </div>
   <p class="subtitulo" id="sub">Pista, chuva, vento, APCC e interdições por trecho. Janela 4h–8h.</p>
   <div class="acoes">
     <button class="btn primario" id="btnShare">↗ Compartilhar</button>
     <button class="btn" id="btnCopy">⎘ Copiar boletim</button>
     <a class="btn" href="cameras.html">📷 Câmeras</a>
+    <a class="btn" href="#apoie">💛 Apoie</a>
   </div>
 </header>
 
 <main id="app"><div class="vazio">Carregando o boletim…</div></main>
+
+<!-- PIX: a chave (#pixChave), o QR (img/pix-qr.png) e o Copia e Cola (data-copiar) mudam JUNTOS.
+     O Copia e Cola é o texto do próprio QR — conferido em 17/11/2026: mesma chave, sem valor fixo, CRC ok. -->
+<section class="apoie" id="apoie" aria-labelledby="apoieTitulo">
+  <p class="rot">Doação voluntária</p>
+  <h2 id="apoieTitulo">Apoie via PIX</h2>
+  <p>O Pedal Rio é gratuito e vai continuar gratuito. Para melhorar e manter o sistema, aceitamos doações.</p>
+  <p>O dinheiro vai para ferramentas pagas que deixam o boletim mais confiável.</p>
+  <p class="destaque">Qualquer valor ajuda. Doar é opcional.</p>
+  <div class="pix">
+    <div class="qr"><img src="img/pix-qr.png" width="184" height="184" alt="QR Code PIX para doar ao Pedal Rio" loading="lazy"></div>
+    <div>
+      <p class="rot">Chave PIX aleatória</p>
+      <p class="chave" id="pixChave">659e2e6f-d16b-429f-a7e0-95f4e5574e4d</p>
+      <p class="quem">Recebedor: Bruno Cortes</p>
+      <div class="acoes">
+        <button class="btn primario" id="btnPixChave" type="button">⎘ Copiar chave PIX</button>
+        <button class="btn" id="btnPixCC" type="button" data-copiar="00020126580014br.gov.bcb.pix0136659e2e6f-d16b-429f-a7e0-95f4e5574e4d5204000053039865802BR5913BRUNOCORTES836009Sao Paulo610901227-20062330529daqr621118811794955995266425563048A09">⎘ Pix Copia e Cola</button>
+      </div>
+    </div>
+  </div>
+  <p class="dica">No celular, é mais fácil copiar a chave e colar no app do banco. O QR serve para ler de outro aparelho.</p>
+</section>
 
 <footer class="rodape">
   <p id="rodapeGerado"></p>
@@ -278,6 +334,18 @@
     if(!t){toast('Nada pra copiar ainda');return;}
     (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast('Boletim copiado');},function(){
       var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Boletim copiado');}catch(e){toast('Não deu pra copiar');}document.body.removeChild(ta);});
+  });
+  function copiar(t,ok){
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast(ok);},function(){
+      var ta=document.createElement('textarea');ta.value=t;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';
+      document.body.appendChild(ta);ta.select();var feito=false;try{feito=document.execCommand('copy');}catch(e){}
+      document.body.removeChild(ta);toast(feito?ok:'Não deu pra copiar — segure o dedo na chave');});
+  }
+  document.getElementById('btnPixChave').addEventListener('click',function(){
+    copiar(document.getElementById('pixChave').textContent.trim(),'Chave PIX copiada');
+  });
+  document.getElementById('btnPixCC').addEventListener('click',function(){
+    copiar(this.getAttribute('data-copiar'),'Pix Copia e Cola copiado');
   });
   document.getElementById('btnShare').addEventListener('click',function(){
     var url='https://brunocortes-create.github.io/pedalera-alerta/';
