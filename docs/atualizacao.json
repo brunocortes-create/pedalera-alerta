@@ -1,31 +1,29 @@
 {
-  "gerado_em": "2026-11-18T00:51:54.213090-03:00",
-  "hora_local": "00:51",
+  "gerado_em": "2026-11-18T00:54:42.104420-03:00",
+  "hora_local": "00:54",
   "data_alvo": "2026-11-18",
-  "status": "indisponivel",
-  "titulo": "⚠️ Atualização das 3h não rodou",
-  "resumo": "A fonte de clima não respondeu. Vale o boletim da noite — e confira o céu e a câmera do seu trecho antes de sair.",
+  "status": "confirmado",
+  "titulo": "✅ CONFIRMADO",
+  "resumo": "Leitura das 00:54: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "status": "indisponivel",
-      "motivos": [
-        "Open-Meteo nao respondeu agora"
-      ],
+      "status": "confirmado",
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": null,
-        "chuva_prob_largada_pct": null,
-        "chuva_mm_total": null,
-        "chuva_mm_madrugada_antes": null,
-        "vento_med_kmh": null,
-        "rajada_max_kmh": null,
-        "vento_dir_cardeal": null,
-        "temp_min_c": null,
-        "temp_max_janela_c": null,
-        "sensacao_largada_c": null,
-        "confianca": null,
-        "ok": false
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 6.1,
+        "rajada_max_kmh": 16.2,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
+        "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
@@ -37,23 +35,21 @@
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "status": "indisponivel",
-      "motivos": [
-        "Open-Meteo nao respondeu agora"
-      ],
+      "status": "confirmado",
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": null,
-        "chuva_prob_largada_pct": null,
-        "chuva_mm_total": null,
-        "chuva_mm_madrugada_antes": null,
-        "vento_med_kmh": null,
-        "rajada_max_kmh": null,
-        "vento_dir_cardeal": null,
-        "temp_min_c": null,
-        "temp_max_janela_c": null,
-        "sensacao_largada_c": null,
-        "confianca": null,
-        "ok": false
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 4.3,
+        "rajada_max_kmh": 17.3,
+        "vento_dir_cardeal": "NE",
+        "temp_min_c": 22,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 25,
+        "confianca": "alta",
+        "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
@@ -65,23 +61,21 @@
     },
     "grumari": {
       "nome": "Grumari",
-      "status": "indisponivel",
-      "motivos": [
-        "Open-Meteo nao respondeu agora"
-      ],
+      "status": "confirmado",
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": null,
-        "chuva_prob_largada_pct": null,
-        "chuva_mm_total": null,
-        "chuva_mm_madrugada_antes": null,
-        "vento_med_kmh": null,
-        "rajada_max_kmh": null,
-        "vento_dir_cardeal": null,
-        "temp_min_c": null,
-        "temp_max_janela_c": null,
-        "sensacao_largada_c": null,
-        "confianca": null,
-        "ok": false
+        "chuva_prob_max_pct": 0,
+        "chuva_prob_largada_pct": 0,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 6.1,
+        "rajada_max_kmh": 16.2,
+        "vento_dir_cardeal": "L",
+        "temp_min_c": 21,
+        "temp_max_janela_c": 25,
+        "sensacao_largada_c": 24,
+        "confianca": "alta",
+        "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 0,
@@ -93,7 +87,7 @@
     }
   },
   "fontes": {
-    "open_meteo": false,
+    "open_meteo": true,
     "alerta_rio": false,
     "alerta_rio_erro": "https://websempre.rio.rj.gov.br/json/chuvas: Expecting value: line 1 column 1 (char 0)"
   },
