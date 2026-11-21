@@ -145,7 +145,6 @@
   <div class="acoes">
     <button class="btn primario" id="btnShare">↗ Compartilhar</button>
     <button class="btn" id="btnCopy">⎘ Copiar boletim</button>
-    <a class="btn" href="cameras.html">📷 Câmeras</a>
     <a class="btn" href="#apoie">💛 Apoie</a>
   </div>
 </header>
@@ -298,7 +297,7 @@
       h+='</div>';
     }
     var f=a.fontes||{};
-    h+='<p class="meta">Fontes: Open-Meteo'+(f.alerta_rio?' + Alerta Rio (chuva medida)':' · Alerta Rio indisponível')+'. Automático, sem revisão humana — na dúvida, olhe o céu e a câmera.</p></section>';
+    h+='<p class="meta">Fontes: Open-Meteo'+(f.alerta_rio?' + Alerta Rio (chuva medida)':' · Alerta Rio indisponível')+'. Automático, sem revisão humana — na dúvida, olhe o céu.</p></section>';
     return h;
   }
   function agraoRioSafe(){try{return agoraRio();}catch(e){return new Date();}}
