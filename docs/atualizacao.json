@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-23T00:08:04.868109-03:00",
-  "hora_local": "00:08",
+  "gerado_em": "2026-11-23T03:15:15.036472-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-11-23",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 00:08: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
@@ -13,7 +13,7 @@
       "motivos": [],
       "agora": {
         "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
+        "chuva_prob_largada_pct": 1,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
         "vento_med_kmh": 4.7,
@@ -38,8 +38,8 @@
       "status": "confirmado",
       "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": 4,
-        "chuva_prob_largada_pct": 4,
+        "chuva_prob_max_pct": 3,
+        "chuva_prob_largada_pct": 3,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
         "vento_med_kmh": 2.9,
@@ -48,7 +48,7 @@
         "temp_min_c": 24,
         "temp_max_janela_c": 28,
         "sensacao_largada_c": 30,
-        "confianca": "alta",
+        "confianca": "media",
         "ok": true
       },
       "vespera": {
@@ -65,7 +65,7 @@
       "motivos": [],
       "agora": {
         "chuva_prob_max_pct": 3,
-        "chuva_prob_largada_pct": 3,
+        "chuva_prob_largada_pct": 1,
         "chuva_mm_total": 0.0,
         "chuva_mm_madrugada_antes": 0.0,
         "vento_med_kmh": 4.7,
