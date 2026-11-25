@@ -1,31 +1,29 @@
 {
-  "gerado_em": "2026-11-25T02:01:55.166033-03:00",
-  "hora_local": "02:01",
+  "gerado_em": "2026-11-25T03:15:13.212026-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-11-25",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 02:01: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [],
   "pontos": {
     "barra_recreio": {
       "nome": "Barra/Recreio",
-      "status": "indisponivel",
-      "motivos": [
-        "Open-Meteo nao respondeu agora"
-      ],
+      "status": "confirmado",
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": null,
-        "chuva_prob_largada_pct": null,
-        "chuva_mm_total": null,
-        "chuva_mm_madrugada_antes": null,
-        "vento_med_kmh": null,
-        "rajada_max_kmh": null,
-        "vento_dir_cardeal": null,
-        "temp_min_c": null,
-        "temp_max_janela_c": null,
-        "sensacao_largada_c": null,
-        "confianca": null,
-        "ok": false
+        "chuva_prob_max_pct": 27,
+        "chuva_prob_largada_pct": 27,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 23.9,
+        "rajada_max_kmh": 50.0,
+        "vento_dir_cardeal": "N",
+        "temp_min_c": 28,
+        "temp_max_janela_c": 30,
+        "sensacao_largada_c": 30,
+        "confianca": "media",
+        "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 24,
@@ -37,23 +35,21 @@
     },
     "zona_sul": {
       "nome": "Zona Sul",
-      "status": "indisponivel",
-      "motivos": [
-        "Open-Meteo nao respondeu agora"
-      ],
+      "status": "confirmado",
+      "motivos": [],
       "agora": {
-        "chuva_prob_max_pct": null,
-        "chuva_prob_largada_pct": null,
-        "chuva_mm_total": null,
-        "chuva_mm_madrugada_antes": null,
-        "vento_med_kmh": null,
-        "rajada_max_kmh": null,
-        "vento_dir_cardeal": null,
-        "temp_min_c": null,
-        "temp_max_janela_c": null,
-        "sensacao_largada_c": null,
-        "confianca": null,
-        "ok": false
+        "chuva_prob_max_pct": 16,
+        "chuva_prob_largada_pct": 16,
+        "chuva_mm_total": 0.0,
+        "chuva_mm_madrugada_antes": 0.0,
+        "vento_med_kmh": 12.5,
+        "rajada_max_kmh": 37.8,
+        "vento_dir_cardeal": "N",
+        "temp_min_c": 29,
+        "temp_max_janela_c": 29,
+        "sensacao_largada_c": 33,
+        "confianca": "alta",
+        "ok": true
       },
       "vespera": {
         "chuva_prob_max_pct": 15,
