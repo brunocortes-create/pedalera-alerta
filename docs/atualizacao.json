@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-26T01:23:40.266799-03:00",
-  "hora_local": "01:23",
+  "gerado_em": "2026-11-26T03:15:14.734402-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-11-26",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 01:23: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [
     "💧 Pista pode estar molhada em: Barra/Recreio, Zona Sul, Grumari."
   ],
@@ -54,7 +54,7 @@
         "temp_min_c": 24,
         "temp_max_janela_c": 24,
         "sensacao_largada_c": 27,
-        "confianca": "media",
+        "confianca": "alta",
         "ok": true
       },
       "vespera": {
