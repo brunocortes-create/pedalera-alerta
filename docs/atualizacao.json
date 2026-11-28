@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-11-28T01:15:07.958106-03:00",
-  "hora_local": "01:15",
+  "gerado_em": "2026-11-28T03:15:14.327654-03:00",
+  "hora_local": "03:15",
   "data_alvo": "2026-11-28",
   "status": "confirmado",
   "titulo": "✅ CONFIRMADO",
-  "resumo": "Leitura das 01:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
+  "resumo": "Leitura das 03:15: nada mudou de relevante desde o boletim da noite. Vale o que está escrito abaixo.",
   "avisos": [
     "💧 Pista pode estar molhada em: Barra/Recreio, Grumari."
   ],
@@ -26,7 +26,7 @@
         "temp_min_c": 20,
         "temp_max_janela_c": 23,
         "sensacao_largada_c": 23,
-        "confianca": "media",
+        "confianca": "baixa",
         "ok": true
       },
       "vespera": {
@@ -80,7 +80,7 @@
         "temp_min_c": 20,
         "temp_max_janela_c": 22,
         "sensacao_largada_c": 22,
-        "confianca": "media",
+        "confianca": "baixa",
         "ok": true
       },
       "vespera": {
